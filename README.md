@@ -10,7 +10,12 @@ This project is supervised by Lars Klein.
 * Romain Pugin    299127
 
 ## Abstract
-What impacts an actor career? This project aims to find how specific patterns impact actors and actresses in their career. Will co-acting with someone famous throw you into the light, or will you be shadowed by the already famous actors? Is it important to star in big-budget films, or do small-budget films have a similar impact? Is quality more important than quantity?
+What impacts the career of an actor or actress? When one must make decisions about their career, popularity might be something to look for. Knowing what maximises one's chances to become more popular or what minimises them is a useful information to have. This project aims to find how specific patterns impact actors and actresses in their career. Will co-acting with someone famous throw you into the light, or will you be shadowed by the already famous actors? Is it important to star in big-budget films, or do small-budget films have a similar impact? Is quality more important than quantity?
+
+## Project questions
+- When do we see peaks of popularity in actor·ress? Is the peak linked to a particular event?
+- What patterns can we highlight before an actor·ress becomes popular?
+- What is the statistical evidence that supports our findings?
 
 This project shall answer the preceding questions in a visual manner, making it both easy and satisfying to read the results.
 
@@ -24,7 +29,7 @@ As the CMU Movie Corpus doesn't provide a sufficient basis to compute an actor's
 ### Google Trends
 We also considered using [Google Trends](https://trends.google.com) as it is an efficient way to have a "popularity" estimation with a finer granularity. But we quickly had to abandon this idea, as the dataset had too little an overlap with the CMU Movie Corpus.
 
-## Steps
+## Methods
 ### Data Sanitazation
 While extracting global features of the dataset, we stumbled upon a few incoherences in the data. Those went to actors being not yet born on the date they starred in a movie, to movie length being smaller than 5 seconds, or bigger than 10 hours. We decided to correct some mentioned errors using the last Freebase dump, and we dropped the ones that were too hard to correct.
 
