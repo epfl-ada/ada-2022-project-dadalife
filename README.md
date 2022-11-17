@@ -30,7 +30,7 @@ As the CMU Movie Corpus doesn't provide a sufficient basis to compute an actor's
 We also considered using [Google Trends](https://trends.google.com) as it is an efficient way to have a "popularity" estimation with a finer granularity. But we quickly had to abandon this idea, as the dataset had too little an overlap with the CMU Movie Corpus.
 
 ## Methods & steps
-### Data Sanitazation
+### Data sanitization
 While extracting global features of the dataset, we stumbled upon a few incoherences in the data. Those went to actors being not yet born on the date they starred in a movie, to movie length being smaller than 5 seconds, or bigger than 10 hours. We decided to correct some mentioned errors using the last Freebase dump, and we dropped the ones that were too hard to correct.
 
 ### Dataset global analysis
