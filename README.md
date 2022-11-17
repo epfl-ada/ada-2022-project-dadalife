@@ -29,7 +29,7 @@ As the CMU Movie Corpus doesn't provide a sufficient basis to compute an actor's
 ### Google Trends
 We also considered using [Google Trends](https://trends.google.com) as it is an efficient way to have a "popularity" estimation with a finer granularity. But we quickly had to abandon this idea, as the dataset had too little an overlap with the CMU Movie Corpus.
 
-## Methods
+## Methods & steps
 ### Data Sanitazation
 While extracting global features of the dataset, we stumbled upon a few incoherences in the data. Those went to actors being not yet born on the date they starred in a movie, to movie length being smaller than 5 seconds, or bigger than 10 hours. We decided to correct some mentioned errors using the last Freebase dump, and we dropped the ones that were too hard to correct.
 
@@ -51,10 +51,13 @@ The final step of the project will consist of extracting the features that have 
 | Task                                                               | Project member | Time estimate |
 |--------------------------------------------------------------------|----------------|---------------|
 | Find coacting with biggest impact                                  | James          | 2h            |
-| Find if successful actors are more specialized or more multi-genre | ??             | 4h            |
+| Extract data on peaks of popularity of actors                      | James          | 4h            |
+| PCA on movies genres to have more suitable data to work with       | Manon & Romain | a lot         |
+| Find if successful actors are more specialized or more multi-genre | Manon & Romain | 4h            |
 | ???                                                                | ???            | ???           |
+| Clean code                                                         | Michaël        | underrated    |
 | Data Story structure                                               | Michaël        | 5h            |
-| Writing Data Story                                                 | ???            | 4h            |
+| Writing Data Story                                                 | Michaël        | 4h            |
 | GitHubPage generation                                              | Romain         | 7h            |
 
 ## References
