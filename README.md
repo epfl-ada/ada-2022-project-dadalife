@@ -15,7 +15,7 @@ What impacts the career of an actor or actress? When one must make decisions abo
 ## Project questions
 - Will co-acting with a famous actor pushe you into the light, or will you be shadowed by the big name ?
 - Is it important to star in big-budget films, or can small-budget films also boost one's career? 
-- Is quality more important than quantity? I.e. does staring in one big movie having a bigger impact than staring in several "little" movies ?
+- Is quality more important than quantity? I.e. does staring in one big movie has a bigger impact than staring in several "little" movies ?
 - When do we see peaks of popularity in actor·ress? Is the peak linked to a particular event?
 - What patterns can we highlight before an actor·ress becomes popular?
 - What are the statistical evidences that support our findings?
