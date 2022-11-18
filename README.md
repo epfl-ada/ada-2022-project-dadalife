@@ -1,79 +1,66 @@
-This README describes data in the CMU Movie Summary Corpus, a collection of 42,306 movie plot summaries and metadata at both the movie level (including box office revenues, genre and date of release) and character level (including gender and estimated age).  This data supports work in the following paper:
+# Stairway to success, highway to hell
 
-David Bamman, Brendan O'Connor and Noah Smith, "Learning Latent Personas of Film Characters," in: Proceedings of the Annual Meeting of the Association for Computational Linguistics (ACL 2013), Sofia, Bulgaria, August 2013.
+This repo contains the CS-401's project of the dADAlife group. The project aims to closely look at actor's carreers, and find out success factors and roles.
+This project is supervised by Lars Klein.
 
-All data is released under a Creative Commons Attribution-ShareAlike License. For questions or comments, please contact David Bamman (dbamman@cs.cmu.edu).
+## Team Members
+* Manon Boissat   272022
+* James Germanier 269717
+* Michaël Tasev   284020
+* Romain Pugin    299127
 
-###
-#
-# DATA
-#
-###
+## Abstract
+What impacts the career of an actor or actress? When one must make decisions about their career, popularity might be something to look for. Knowing what maximises one's chances to become more popular or what minimises them is a useful information to have. This project aims to find how specific patterns impact actors and actresses in their career. Will co-acting with someone famous throw you into the light, or will you be shadowed by the already famous actors? Is it important to star in big-budget films, or do small-budget films have a similar impact? Is quality more important than quantity?
 
-1. plot_summaries.txt.gz [29 M] 
+## Project questions
+- When do we see peaks of popularity in actor·ress? Is the peak linked to a particular event?
+- What patterns can we highlight before an actor·ress becomes popular?
+- What is the statistical evidence that supports our findings?
 
-Plot summaries of 42,306 movies extracted from the November 2, 2012 dump of English-language Wikipedia.  Each line contains the Wikipedia movie ID (which indexes into movie.metadata.tsv) followed by the summary.
+This project shall answer the preceding questions in a visual manner, making it both easy and satisfying to read the results.
 
+## Datasets
+### CMU Movie Summary Corpus
+The initial and teaching staff supported dataset for this project is the [CMU movie summary corpus](http://www.cs.cmu.edu/~ark/personas/). It describes films, as well as actor participation in said films, with about 42'000 films and 450'000 acting entries.
 
-2. corenlp_plot_summaries.tar.gz [628 M, separate download]
+### The Numbers
+As the CMU Movie Corpus doesn't provide a sufficient basis to compute an actor's or a film's popularity, we will also use [The Numbers](https://www.the-numbers.com/box-office-star-records/domestic/yearly-acting/). It is publicly available as long as wanted data is copied by hand and not automatically scraped. As the data is in a quite dense format, this doesn't represent much work. The dataset provides a "star scores" for many actors, from 1980 to 2022. Each year contains between 300 and 600 **american** actors data, and the "star score" is what we'll use for actors popularity.
 
-The plot summaries from above, run through the Stanford CoreNLP pipeline (tagging, parsing, NER and coref). Each filename begins with the Wikipedia movie ID (which indexes into movie.metadata.tsv).
+### Google Trends
+We also considered using [Google Trends](https://trends.google.com) as it is an efficient way to have a "popularity" estimation with a finer granularity. But we quickly had to abandon this idea, as the dataset had too little an overlap with the CMU Movie Corpus.
 
+## Methods & steps
+### Data sanitization
+While extracting global features of the dataset, we stumbled upon a few incoherences in the data. Those went to actors being not yet born on the date they starred in a movie, to movie length being smaller than 5 seconds, or bigger than 10 hours. We decided to correct some mentioned errors using the last Freebase dump, and we dropped the ones that were too hard to correct.
 
-###
-#
-# METADATA
-#
-###
+### Dataset global analysis
+To analyse and better define the next step's pipeline, we first globally analysed the dataset we had. The analysis, along with some conclusion drawn from it, can be found in the jupyter notebook.
 
-3. movie.metadata.tsv.gz [3.4 M]
+### Definition of the popularity
+The last step was to find an appropriate popularity measure for each actor. We first tried to use the numbers of mentions of an actor in films critics using the [Rotten Tomatoes](https://www.rottentomatoes.com/) dataset, but it was a far too noisy estimate. This is where *The Numbers* comes into play. It calculates the popularity according to the box office revenue, but smoothens it across time. We also could have calculated this by ourselves, but this would not have been worth the effort.
 
-
-Metadata for 81,741 movies, extracted from the Noverber 4, 2012 dump of Freebase.  Tab-separated; columns:
-
-1. Wikipedia movie ID
-2. Freebase movie ID
-3. Movie name
-4. Movie release date
-5. Movie box office revenue
-6. Movie runtime
-7. Movie languages (Freebase ID:name tuples)
-8. Movie countries (Freebase ID:name tuples)
-9. Movie genres (Freebase ID:name tuples)
-
-
-
-4. character.metadata.tsv.gz [14 M]
-
-Metadata for 450,669 characters aligned to the movies above, extracted from the Noverber 4, 2012 dump of Freebase.  Tab-separated; columns:
-
-1. Wikipedia movie ID
-2. Freebase movie ID
-3. Movie release date
-4. Character name
-5. Actor date of birth
-6. Actor gender
-7. Actor height (in meters)
-8. Actor ethnicity (Freebase ID)
-9. Actor name
-10. Actor age at movie release
-11. Freebase character/actor map ID
-12. Freebase character ID
-13. Freebase actor ID
+### Choice of an interesting subset
+The *CMU Movies Summary Corpus* contains more than 50% of American movies. This is probably due to the dataset being made by an american university. In parallel to this, we chose to use a popularity metric based on the box office revenue. As we don't exactly know how this is compared across countries in our dataset, this metric is only relevant across one country (or would need to be standardized, with respect to the GDB for example). Furthermore, *The Numbers* is a dataset containing mainly American actors, hence the choice to work with only american films, and actors starring in them.
 
 
-##
-#
-# TEST DATA
-#
-##
 
-tvtropes.clusters.txt
-
-72 character types drawn from tvtropes.com, along with 501 instances of those types.  The ID field indexes into the Freebase character/actor map ID in character.metadata.tsv.
-
-name.clusters.txt
+## Future work
+The final step of the project will consist of extracting the features that have an impact on the popularity. The most important tasks are summarized in the following table:
 
 
-970 unique character names used in at least two different movies, along with 2,666 instances of those types.  The ID field indexes into the Freebase character/actor map ID in character.metadata.tsv.
+| Task                                                               | Project member | Time estimate |
+|--------------------------------------------------------------------|----------------|---------------|
+| Find coacting with biggest impact                                  | James          | 2h            |
+| Extract data on peaks of popularity of actors                      | James          | 4h            |
+| PCA on movies genres to have more suitable data to work with       | Manon & Romain | a lot         |
+| Find if successful actors are more specialized or more multi-genre | Manon & Romain | 4h            |
+| ???                                                                | ???            | ???           |
+| Clean code                                                         | Michaël        | underrated    |
+| Data Story structure                                               | Michaël        | 5h            |
+| Writing Data Story                                                 | Michaël        | 4h            |
+| GitHubPage generation                                              | Romain         | 7h            |
 
+## References
+\[1\] **[Learning Latent Personas of Film Characters](http://www.cs.cmu.edu/~dbamman/pubs/pdf/bamman+oconnor+smith.acl13.pdf)**, [David Bamman](http://www.cs.cmu.edu/~dbamman), [Brendan O'Connor](http://brenocon.com), and [Noah A. Smith](http://www.cs.cmu.edu/~nasmith) . ACL 2013, Sofia, Bulgaria, August 2013
+\[2\] [The Numbers](https://www.the-numbers.com/), 2017
+\[3\] [Rotten Tomatoes](https://www.kaggle.com/datasets/stefanoleone992/rotten-tomatoes-movies-and-critic-reviews-dataset) Kaggle Dataset, as of 2020-10-31
