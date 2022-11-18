@@ -1,5 +1,2 @@
 .idea
-character.metadata.tsv
-movie.metadata.tsvname.clusters.txt
-plot_summaries.txt
-tvtropes.clusters.txt
+data
