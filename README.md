@@ -55,10 +55,8 @@ The final step of the project will consist of extracting the features that have 
 |--------------------------------------------------------------------|----------------|---------------|
 | Find coacting with biggest impact                                  | James          | 2h            |
 | Extract data on peaks of popularity of actors                      | James          | 4h            |
-| PCA on movies genres to have more suitable data to work with       | Manon & Romain | a lot         |
+| PCA on movies genres to have more suitable data to work with       | Manon & Romain | 6h            |
 | Find if successful actors are more specialized or more multi-genre | Manon & Romain | 4h            |
-| ???                                                                | ???            | ???           |
-| Clean code                                                         | Michaël        | underrated    |
 | Data Story structure                                               | Michaël        | 5h            |
 | Writing Data Story                                                 | Michaël        | 4h            |
 | GitHubPage generation                                              | Romain         | 7h            |
