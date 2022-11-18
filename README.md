@@ -1,4 +1,4 @@
-# Stairway to success, highway to hell
+# Stairway to success, highway to hell?
 
 This repo contains the CS-401's project of the dADAlife group. The project aims to closely look at actor's carreers, and find out success factors and roles.
 This project is supervised by Lars Klein.
@@ -10,12 +10,12 @@ This project is supervised by Lars Klein.
 * Romain Pugin    299127
 
 ## Abstract
-What impacts the career of an actor or actress? When one must make decisions about their career, popularity might be something to look for. Knowing what maximises one's chances to become more popular or what minimises them is a useful information to have. This project aims to find how specific patterns impact actors and actresses in their career. 
+What impacts the career of an actor or actress? When one must make decisions about their career, popularity might be something to look for. Knowing what maximises one's chances to become more popular or what minimises it is a useful information to have. This project aims to find how specific patterns impact actors and actresses in their career. 
 
 ## Project questions
-- Will co-acting with someone famous throw you into the light, or will you be shadowed by the already famous actors?
-- Is it important to star in big-budget films, or do small-budget films have a similar impact? 
-- Is quality more important than quantity? I.e. is it better to star in more movies or to star in more movies?
+- Will co-acting with a famous actor pushe you into the light, or will you be shadowed by the big name ?
+- Is it important to star in big-budget films, or can small-budget films also boost one's career? 
+- Is quality more important than quantity? I.e. does staring in one big movie having a bigger impact than staring in several "little" movies ?
 - When do we see peaks of popularity in actor·ress? Is the peak linked to a particular event?
 - What patterns can we highlight before an actor·ress becomes popular?
 - What are the statistical evidences that support our findings?
@@ -40,12 +40,10 @@ While extracting global features of the dataset, we stumbled upon a few incohere
 To analyse and better define the next step's pipeline, we first globally analysed the dataset we had. The analysis, along with some conclusion drawn from it, can be found in the jupyter notebook.
 
 ### Definition of the popularity
-The last step was to find an appropriate popularity measure for each actor. We first tried to use the numbers of mentions of an actor in films critics using the [Rotten Tomatoes](https://www.rottentomatoes.com/) dataset, but it was a far too noisy estimate. This is where *The Numbers* comes into play. It calculates the popularity according to the box office revenue, but smoothens it across time. We also could have calculated this by ourselves, but this would not have been worth the effort.
+The last step was to find an appropriate popularity measure for each actor. We first tried to use the numbers of mentions of an actor in films critics using the [Rotten Tomatoes](https://www.rottentomatoes.com/) dataset, but it was a far too noisy estimate. This is where *The Numbers* comes into play. It calculates the popularity according to the box office revenue, but smoothens it across time. 
 
 ### Choice of an interesting subset
-The *CMU Movies Summary Corpus* contains more than 50% of American movies. This is probably due to the dataset being made by an american university. In parallel to this, we chose to use a popularity metric based on the box office revenue. As we don't exactly know how this is compared across countries in our dataset, this metric is only relevant across one country (or would need to be standardized, with respect to the GDB for example). Furthermore, *The Numbers* is a dataset containing mainly American actors, hence the choice to work with only american films, and actors starring in them.
-
-
+The *CMU Movies Summary Corpus* contains more than 50% of USA movies. This is probably due to the dataset being made by an american university. In parallel to this, we chose to use a popularity metric based on the box office revenue. As we don't exactly know how this is compared across countries in our dataset, this metric is only relevant across one country (or would need to be standardized, with respect to the GDB for example). Furthermore, *The Numbers* has many different dataset including a specific one (whuch we used) scoring the actors popularity based on the the US BO revenue.
 
 ## Future work
 The final step of the project will consist of extracting the features that have an impact on the popularity. The most important tasks are summarized in the following table:
@@ -55,10 +53,9 @@ The final step of the project will consist of extracting the features that have 
 |--------------------------------------------------------------------|----------------|---------------|
 | Find coacting with biggest impact                                  | James          | 2h            |
 | Extract data on peaks of popularity of actors                      | James          | 4h            |
-| PCA on movies genres to have more suitable data to work with       | Manon & Romain | a lot         |
+| PCA on movies genres to have more suitable data to work with       | Manon & Romain | 6h            |
 | Find if successful actors are more specialized or more multi-genre | Manon & Romain | 4h            |
-| ???                                                                | ???            | ???           |
-| Clean code                                                         | Michaël        | underrated    |
+| TBD                                                                | all            | TBD           |
 | Data Story structure                                               | Michaël        | 5h            |
 | Writing Data Story                                                 | Michaël        | 4h            |
 | GitHubPage generation                                              | Romain         | 7h            |
