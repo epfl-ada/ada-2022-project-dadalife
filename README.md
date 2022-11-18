@@ -10,12 +10,15 @@ This project is supervised by Lars Klein.
 * Romain Pugin    299127
 
 ## Abstract
-What impacts the career of an actor or actress? When one must make decisions about their career, popularity might be something to look for. Knowing what maximises one's chances to become more popular or what minimises them is a useful information to have. This project aims to find how specific patterns impact actors and actresses in their career. Will co-acting with someone famous throw you into the light, or will you be shadowed by the already famous actors? Is it important to star in big-budget films, or do small-budget films have a similar impact? Is quality more important than quantity?
+What impacts the career of an actor or actress? When one must make decisions about their career, popularity might be something to look for. Knowing what maximises one's chances to become more popular or what minimises them is a useful information to have. This project aims to find how specific patterns impact actors and actresses in their career. 
 
 ## Project questions
+- Will co-acting with someone famous throw you into the light, or will you be shadowed by the already famous actors?
+- Is it important to star in big-budget films, or do small-budget films have a similar impact? 
+- Is quality more important than quantity? I.e. is it better to star in more movies or to star in more movies?
 - When do we see peaks of popularity in actor·ress? Is the peak linked to a particular event?
 - What patterns can we highlight before an actor·ress becomes popular?
-- What is the statistical evidence that supports our findings?
+- What are the statistical evidences that support our findings?
 
 This project shall answer the preceding questions in a visual manner, making it both easy and satisfying to read the results.
 
