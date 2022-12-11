@@ -1,4 +1,5 @@
 layout: page
 title: "dadalife"
-permalink: /
+permalink: /dadalife
+
 
