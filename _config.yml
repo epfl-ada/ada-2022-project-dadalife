@@ -22,7 +22,7 @@ title: dadalife
 email: romain.pugin@epfl.ch
 description: Site is maintained by Romain Pugin. Created with Jekyll
 domain: romain46.github.io
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://romain46.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
