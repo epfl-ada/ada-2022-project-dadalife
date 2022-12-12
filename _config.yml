@@ -28,7 +28,8 @@ github_username:  romain46
 author: romain46
 
 # Build settings
-theme: jekyll-theme-yat
+remote_theme: "jeffreytse/jekyll-theme-yat"
+# theme: jekyll-theme-yat
 
 yat:
   date_format: "%Y %m %d"

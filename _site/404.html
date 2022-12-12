@@ -3,10 +3,11 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"></meta><!-- Begin Jekyll SEO tag v2.8.0 -->
+  <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c"><!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>dadalife | Site is maintained by Romain Pugin. Created with Jekyll</title>
 <meta name="generator" content="Jekyll v3.9.2" />
 <meta property="og:title" content="dadalife" />
+<meta name="author" content="romain46" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Site is maintained by Romain Pugin. Created with Jekyll" />
 <meta property="og:description" content="Site is maintained by Romain Pugin. Created with Jekyll" />
@@ -17,9 +18,9 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="dadalife" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Site is maintained by Romain Pugin. Created with Jekyll","headline":"dadalife","url":"http://localhost:4000/404.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"romain46"},"description":"Site is maintained by Romain Pugin. Created with Jekyll","headline":"dadalife","url":"http://localhost:4000/404.html"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="shortcut icon" href="">
+<link rel="icon" href="">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
   <link rel="stylesheet" href="/assets/css/main.css">
@@ -258,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
             </span>
           </label>
 
-          <div class="trigger"><a class="page-link" href="/about.html">ABOUT</a><a class="page-link" href="/">ADA PROJECT WEBSITE</a>
+          <div class="trigger">
 
 
 
@@ -269,7 +270,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 </header>
 
 <script>
-  (function() {
+  function initHeader() {
     var lastScrollY = getScrollPos().y;
     var documentElement = document.documentElement;
 
@@ -294,7 +295,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     });
 
     storeScrollData();
-  })();
+  }
+  document.addEventListener('DOMContentLoaded', initHeader);
 </script>
 
 
@@ -591,6 +593,24 @@ document.addEventListener('DOMContentLoaded', function(event) {
     }
   })();
 </script>
+<div id="click-to-top" class="click-to-top">
+  <i class="fa fa-arrow-up"></i>
+</div>
+<script>
+  (function () {
+    const clickToTop = document.getElementById('click-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        clickToTop.classList.add('show')
+      }else {
+        clickToTop.classList.remove('show')
+      }
+    });
+    clickToTop.addEventListener('click', () => {
+      window.smoothScrollTo(0);
+    });
+  })();
+</script>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <style type="text/css" media="screen">
@@ -619,10 +639,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
   <data class="u-url" href="/"></data>
 
   <div class="wrapper">
-    <div class="site-footer-inner">
-      <div> </div>
+    <div class="site-footer-inner"><div></div>
       <div>Powered by <a title="Jekyll is a simple, blog-aware, static site
-      generator." href="http://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
+      generator." href="https://jekyllrb.com/">Jekyll</a> &amp; <a title="Yat, yet
       another theme." href="https://github.com/jeffreytse/jekyll-theme-yat">Yat Theme</a>.</div>
       <div class="footer-col rss-subscribe">Subscribe <a href="/feed.xml">via RSS</a></div>
     </div>
