@@ -3,6 +3,17 @@
 This repo contains the CS-401's project of the dADAlife group. The project aims to closely look at actor's carreers, and find out success factors and roles.
 This project is supervised by Lars Klein.
 
+```
+.
+├── raw-data                # Data initially imported
+├── processed-data          # Data after being cleaned and filtered
+├── src                     # Notebooks
+│   ├── cleaning            # Cleaning raw-data to output cleaned-data
+│   ├── filtering           # Filters data, drops
+│   └── main                # Main notebook
+└── README.md
+```
+
 ## Team Members
 * Manon Boissat   272022
 * James Germanier 269717
