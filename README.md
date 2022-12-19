@@ -26,7 +26,7 @@ This project shall answer the preceding questions in a visual manner, making it 
 ├── raw-data                            # Data initially imported
 ├── pre-processed-data                  # Data after being pre-processed
 ├── src                                 # Notebooks
-│   ├── preprocessing.ipynb            # Cleaning and filtering raw-data to output cleaned-data
+│   ├── preprocessing.ipynb             # Cleaning and filtering raw-data to output cleaned-data
 │   └── main.ipynb                      # Main notebook
 └── README.md
 ```
