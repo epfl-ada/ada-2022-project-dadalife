@@ -1,24 +1,13 @@
-# Stairway to success, highway to hell?
+# Stairway to fame, highway to hell?
 
 This repo contains the CS-401's project of the dADAlife group. The project aims to closely look at actor's carreers, and find out success factors and roles.
 This project is supervised by Lars Klein.
 
-```
-.
-├── raw-data                # Data initially imported
-├── processed-data          # Data after being cleaned and filtered
-├── src                     # Notebooks
-│   ├── cleaning            # Cleaning raw-data to output cleaned-data
-│   ├── filtering           # Filters data, drops
-│   └── main                # Main notebook
-└── README.md
-```
-
 ## Team Members
 * Manon Boissat   272022
 * James Germanier 269717
-* Michaël Tasev   284020
 * Romain Pugin    299127
+* Michaël Tasev   284020
 
 ## Abstract
 What impacts the career of an actor or actress? When one must make decisions about their career, popularity might be something to look for. Knowing what maximises one's chances to become more popular or what minimises it is a useful information to have. This project aims to find how specific patterns impact actors and actresses in their career. 
@@ -32,6 +21,21 @@ What impacts the career of an actor or actress? When one must make decisions abo
 - What are the statistical evidences that support our findings?
 
 This project shall answer the preceding questions in a visual manner, making it both easy and satisfying to read the results.
+
+.
+├── raw-data                            # Data initially imported
+├── pre-processed-data                  # Data after being pre-processed
+├── src                                 # Notebooks
+│   ├── pre-processing.ipynb            # Cleaning and filtering raw-data to output cleaned-data
+│   └── main.ipynb                      # Main notebook
+└── README.md
+
+- ```raw-data``` is composed from the imported datasets described below, CMU Movie Summary Corpus and The Numbers.
+- ```pre-processed-data``` is composed of data after being handled by pre-processing.ipynb, e.g. cleaning the data, filtering and dropping some entries thoughtfully. For practical purposes, we uploaded on this repo the pre-processed files once we ran the notebook, this is done so that you (grading TAs) don't have to run the notebook to create the files.
+- ```src``` contains the notebooks to run:
+    - ```preprocessing.ipynb``` takes raw data as input and outputs processed data, suitable for analysis.
+    - ```main.ipynb``` is the main notebook that produces analysis based on suitable data, this is where we do stuff.
+
 
 ## Datasets
 ### CMU Movie Summary Corpus
