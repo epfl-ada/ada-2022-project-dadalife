@@ -1,4 +1,4 @@
-# Stairway to success, highway to hell?
+# Stairway to fame, highway to hell?
 
 This repo contains the CS-401's project of the dADAlife group. The project aims to closely look at actor's carreers, and find out success factors and roles.
 This project is supervised by Lars Klein.
