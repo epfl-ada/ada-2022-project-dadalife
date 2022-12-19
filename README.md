@@ -5,12 +5,16 @@ This project is supervised by Lars Klein.
 
 ```
 .
-├── raw-data                # Data initially imported
-├── processed-data          # Data after being cleaned and filtered
-├── src                     # Notebooks
-│   ├── cleaning            # Cleaning raw-data to output cleaned-data
-│   ├── filtering           # Filters data, drops
-│   └── main                # Main notebook
+├── raw-data                            # Data initially imported
+├── processed-data                      # Data after being cleaned and filtered
+├── src                                 # Notebooks
+│   ├── cleaning                        # Cleaning raw-data to output cleaned-data
+│   │   ├── cleaning.ipynb              # Cleaning given data
+│   │   └── cleaning_numbers.ipynb      # Cleaning imported data from other sources
+│   ├── filtering                       # Filters data, drops
+│   │   └── filtering.ipynb             # Filtering given data
+│   └── main                            # Main notebook
+│       └── main.ipynb                  # Main notebook
 └── README.md
 ```
 
