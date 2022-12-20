@@ -22,6 +22,8 @@ Who thought that to be famous you have to play in films that people _actually_ w
         <select id="s_year" onchange="update_current_hist()"></select>
         <select id="s_genre" onchange="update_current_hist()"></select>
     </div>
+    <iframe id="hist_booster">No available data</iframe>
+    <p id="hist_error">No data for given selection</p>
 </div>
 
 ## Don't play with famous actors
@@ -43,3 +45,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 <script src="assets/js/index.js"></script>
 <link rel="stylesheet" href="assets/css/custom.css"/>
+<link rel="shortcut icon" type="image/png" href="favicon.ico">
