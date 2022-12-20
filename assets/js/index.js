@@ -21,16 +21,18 @@ const genres = [
 
 function update_current_hist(){
 
-    const histograms = document.querySelectorAll('.img_hist_booster');
-    histograms.forEach(box => {
-        box.style.display = 'none';
-    });
+    let p = document.getElementById("s_year").value
+    let g = document.getElementById("s_genre").value
+    let n = "assets/images/img/career_booster_dc_"+p+"_genre_"+g+".html"
 
-    let year = document.getElementById("s_year").value
-    let genre = document.getElementById("s_genre").value
-
-    document.getElementById(year+"_"+genre).style.display = "inline"
-
+    if (UrlExists(n)){
+        document.getElementById("hist_booster").style.display = "inline"
+        document.getElementById("hist_error").style.display = "none"
+        document.getElementById("hist_booster").setAttribute("src", n)
+    }else{
+        document.getElementById("hist_booster").style.display = "none"
+        document.getElementById("hist_error").style.display = "inline"
+    }
 }
 
 // function to load all histograms of career boosters
@@ -48,9 +50,17 @@ function load_img(){
     }
 }
 
+function load_first_img(){
+    let p = document.getElementById("s_year").value
+    let g = document.getElementById("s_genre").value
+    let n = "career_booster_dc_"+p+"_genre_"+g+".html"
+    document.getElementById("hist_booster").setAttribute("src", `assets/images/img/${n}`)
+}
+
+
 
 //function to set the selectors options. should be called only once otherwise shit will happen
-function set_select() {
+function init_select() {
     for(let i=0; i<periods.length;i++){
         let p = periods[i]
         let elem = "<option value='"+p+"'>"+p.replace("_","-") + "</option>"
@@ -65,7 +75,15 @@ function set_select() {
     }
 }
 
+function UrlExists(url) {
+    let http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!==404;
+}
 
-load_img()
-set_select()
-update_current_hist()
+
+//load_img()
+init_select()
+//update_current_hist()
+load_first_img()
