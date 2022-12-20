@@ -41,5 +41,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 
 
-<script src="assets/scripts/index.js"></script>
+<script src="assets/js/index.js"></script>
 <link rel="stylesheet" href="assets/css/custom.css"/>
