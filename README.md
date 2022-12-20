@@ -13,3 +13,6 @@ bundle install
 bundle exec jekyll serve
 ```
 
+Sources:
+banner: https://www.pexels.com/
+favicon: https://www.pngwing.com/
