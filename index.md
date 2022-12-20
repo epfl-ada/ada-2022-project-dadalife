@@ -4,9 +4,9 @@
 
 layout: home
 title: ADA project website
-heading: Road to being a HollyWood star !
+heading: Road to being a star !
 subheading: ""
-banner: "/assets/images/banners/banner.jpg"
+banner: "/assets/images/banners/hwbanner.jpg"
 ---
 
 # DISCLAIMER: SITE UNDER CONSTRUCTION, DON'T TAKE IT TOO SERIOUSLY :)
@@ -17,7 +17,7 @@ You just get your first background character role, and you're wondering how you 
 
 ## don't starr in documentary movies
 Who thought that to be famous you have to play in films that people _actually_ want to watch ? And no, I'm not saying you should be a porn actor. Even though that could work out.
-<div id="img-container">
+<div id="img-container" class="img-container">
     <div class="mb2">
         <select id="s_year" onchange="update_current_hist()"></select>
         <select id="s_genre" onchange="update_current_hist()"></select>

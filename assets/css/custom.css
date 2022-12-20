@@ -1,3 +1,22 @@
 .mb2{
     margin-bottom: 15px;
 }
+
+/*to have the text at a better palce*/
+.page-banner .page-banner-inner {
+    top: 80%;
+}
+
+.sidebar {
+    display: none;
+}
+
+select {
+    max-width: 100%;
+    text-wrap: normal;
+}
+
+.img-container {
+    text-align: center;
+    margin-bottom: 15px;
+}
