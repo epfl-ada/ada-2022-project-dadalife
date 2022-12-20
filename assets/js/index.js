@@ -35,30 +35,6 @@ function update_current_hist(){
     }
 }
 
-// function to load all histograms of career boosters
-function load_img(){
-    for (let i=0; i<periods.length; i++){
-        let p = periods[i]
-        for (let j=0; j<genres.length; j++){
-            let g=genres[j]
-            let n = "career_booster_dc_"+p+"_genre_"+g+".html"
-            let id = p+"_"+g
-            document.getElementById("img-container").insertAdjacentHTML("beforeend",
-                `<iframe id='${id}' class='img_hist_booster' src='assets/images/img/${n}'>No corresponding data</iframe>`
-            )
-        }
-    }
-}
-
-function load_first_img(){
-    let p = document.getElementById("s_year").value
-    let g = document.getElementById("s_genre").value
-    let n = "career_booster_dc_"+p+"_genre_"+g+".html"
-    document.getElementById("hist_booster").setAttribute("src", `assets/images/img/${n}`)
-}
-
-
-
 //function to set the selectors options. should be called only once otherwise shit will happen
 function init_select() {
     for(let i=0; i<periods.length;i++){
@@ -83,7 +59,5 @@ function UrlExists(url) {
 }
 
 
-//load_img()
 init_select()
-//update_current_hist()
-load_first_img()
+update_current_hist()
