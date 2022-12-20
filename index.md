@@ -17,6 +17,12 @@ You just get your first background character role, and you're wondering how you 
 
 ## don't starr in documentary movies
 Who thought that to be famous you have to play in films that people _actually_ want to watch ? And no, I'm not saying you should be a porn actor. Even though that could work out.
+<div id="img-container">
+    <div class="mb2">
+        <select id="s_year" onchange="update_current_hist()"></select>
+        <select id="s_genre" onchange="update_current_hist()"></select>
+    </div>
+</div>
 
 ## Don't play with famous actors
 If you starr in a film with Leonardo di caprio, you won't ever be famous. It's like filming a porno with Rocco Sifredi. Everyone will remember him, no one will remember you. Instead, try playing with kind and talentful actors like Ben Stiller.
@@ -33,3 +39,7 @@ Yeah dumbass, if the public stops seeing you on the big screen, you won't be fam
 
 ## be the main character in the films you starr in
 Or don't, I don't care. But don't come back crying because nobody nominated you for the oscars.
+
+
+<script src="assets/scripts/index.js"></script>
+<link rel="stylesheet" href="assets/css/custom.css"/>
