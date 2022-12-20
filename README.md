@@ -1,9 +1,14 @@
-This repo contains the github pages for the ADA project of the dadalife group.
+# Road to being a star !
 
-The page is accessible on https://romain46.github.io/. If you want to run it locally, clone the code, 
-then:
+This branch contains the code to run GitHub Pages for the 2022 ADA project of the dADAlife group.
+It is built using [jekyll](https://jekyllrb.com/) with [Yet Another Theme](https://github.com/jeffreytse/jekyll-theme-yat).
+
+The page is publicly accessible from [here](https://epfl-ada.github.io/ada-2022-project-dadalife/).
+
+If you want to run it locally :
 ```bash
-cd <repo>
+git clone git@github...
+cd ada-2022-project-dadalife
 bundle install
 bundle exec jekyll serve
 ```

@@ -16,7 +16,7 @@ banner: "/assets/images/banners/hwbanner.jpg"
 You just get your first background character role, and you're wondering how you should play your move to become HollyWood's most famous actor or actress ? Then you stumbled on the right website: in the following sections, we'll show you how to organize your carreer, who to play with, in what kind of film to starr in, and other tricks to boost your popularity to the top !
 
 ## don't starr in documentary movies
-Who thought that to be famous you have to play in films that people _actually_ want to watch ? And no, I'm not saying you should be a porn actor. Even though that could work out.
+Who thought that to be famous you have to play in films that people _actually_ want to watch ?
 <div id="img-container" class="img-container">
     <div class="mb2">
         <select id="s_year" onchange="update_current_hist()"></select>
@@ -25,20 +25,20 @@ Who thought that to be famous you have to play in films that people _actually_ w
 </div>
 
 ## Don't play with famous actors
-If you starr in a film with Leonardo di caprio, you won't ever be famous. It's like filming a porno with Rocco Sifredi. Everyone will remember him, no one will remember you. Instead, try playing with kind and talentful actors like Ben Stiller.
-
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ## Wanna tune your carreer even further ?
-Here's a beautiful list of what will probably impact your career. If you're a smartass, you'll notice that talent is not on the list. That's because of 2 reasons : 
-    1. you don't have any
-    2. we don't have an efficient way of measuring that
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 
 # You're in the top 10 most famous actors in America, well done. But here are a few tips to stay on top.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## don't stop making films
-Yeah dumbass, if the public stops seeing you on the big screen, you won't be famous anymore. Stupid.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## be the main character in the films you starr in
-Or don't, I don't care. But don't come back crying because nobody nominated you for the oscars.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
 
 
 <script src="assets/scripts/index.js"></script>
