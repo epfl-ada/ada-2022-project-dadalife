@@ -1,4 +1,5 @@
 .idea
 .ipynb_checkpoints
 raw_data/corenlp_plot_summaries
+raw_data/plot_summaries.txt
 /img/
