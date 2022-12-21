@@ -1,0 +1,342 @@
+1	Bruce Willis	462	7	1.3
+2	Julia Roberts	434	5	1.2
+3	Robin Williams	421	6	1.2
+4	Matt Damon	382	6	2.3
+5	Nicolas Cage	366	6	2.7
+6	Pierce Brosnan	329	4	1.0
+7	Tommy Lee Jones	311	4	1.0
+8	George Clooney	286	5	2.0
+9	Ben Affleck	283	4	2.5
+10	John Travolta	283	4	3.3
+11	Tom Hanks	276	3	1.0
+12	Will Smith	269	3	1.3
+13	Adam Sandler	267	3	1.0
+14	Eddie Murphy	262	4	0.8
+15	Harrison Ford	256	4	0.8
+16	Mel Gibson	248	3	0.7
+17	Kevin Spacey	245	4	1.3
+18	Robert De Niro	244	4	2.3
+19	Sandra Bullock	241	4	1.0
+20	Catherine Zeta-Jones	237	3	2.3
+21	Jim Carrey	228	3	1.0
+22	Al Pacino	228	4	1.3
+23	Gwyneth Paltrow	227	3	1.7
+24	Denzel Washington	215	5	0.8
+25	Meg Ryan	204	3	4.7
+26	John Cusack	203	5	4.6
+27	Drew Barrymore	202	3	1.3
+28	Brad Pitt	196	4	1.3
+29	Heather Graham	194	3	4.7
+30	Tim Allen	181	3	1.0
+31	Richard Gere	180	3	1.3
+32	Liam Neeson	178	2	1.0
+33	Anthony Hopkins	177	3	1.7
+34	John Malkovich	172	3	4.3
+35	Matthew Broderick	171	2	1.0
+36	Cameron Diaz	171	2	1.5
+37	Keanu Reeves	170	2	1.0
+38	Mike Myers	168	3	2.0
+39	Jennifer Lopez	166	3	1.3
+40	Kevin Kline	166	3	2.0
+41	Leonardo DiCaprio	164	2	1.0
+42	Steve Martin	164	3	1.0
+43	Ice Cube	164	3	3.0
+44	Wesley Snipes	163	3	1.0
+45	Nicole Kidman	163	3	2.0
+46	Matthew McConaughey	160	3	2.3
+47	Ashley Judd	159	2	2.0
+48	Gary Oldman	148	2	1.5
+49	Jean Reno	145	2	2.0
+50	Jonathan Pryce	145	2	4.0
+51	Dennis Quaid	142	2	2.0
+52	Chris Tucker	141	2	1.5
+53	Annette Bening	140	2	2.0
+54	Tom Sizemore	140	2	2.5
+55	Danny DeVito	137	2	5.5
+56	Sarah Michelle Gellar	136	2	2.5
+57	Jon Voight	135	2	2.5
+58	Jodie Foster	135	2	5.0
+59	Michael Douglas	134	2	1.0
+60	Anne Heche	134	2	1.0
+61	Sigourney Weaver	132	2	1.5
+62	Johnny Depp	130	2	1.5
+63	Ben Stiller	130	2	1.5
+64	Morgan Freeman	127	2	1.0
+65	Neve Campbell	127	3	2.7
+66	Tara Reid	127	2	5.5
+67	Laurence Fishburne	124	2	1.5
+68	Salma Hayek	122	3	3.3
+69	Antonio Banderas	120	2	1.0
+70	Brendan Fraser	118	2	1.0
+71	Mark Wahlberg	118	3	1.3
+72	Billy Crystal	114	2	1.5
+73	Taye Diggs	114	3	1.7
+74	Natalie Portman	113	2	6.5
+75	Russell Crowe	110	2	2.0
+76	Kristin Scott Thomas	110	2	2.0
+77	Tobey Maguire	109	2	0.5
+78	Kevin Costner	109	3	4.0
+79	Sean Penn	106	2	1.5
+80	Samuel L. Jackson	105	3	1.7
+81	Ali Larter	105	2	5.0
+82	Reese Witherspoon	100	3	1.0
+83	Edward Burns	100	1	2.0
+84	Ewan McGregor	100	1	2.0
+85	Kate Winslet	100	1	2.0
+86	Jake Lloyd	100	1	4.0
+87	Jackie Chan	99	2	1.0
+88	Gena Rowlands	99	2	2.0
+89	Liv Tyler	99	1	3.0
+90	Haley Joel Osment	99	1	4.0
+91	F. Murray Abraham	97	2	6.0
+92	Angelina Jolie	96	2	2.0
+93	Carrie Anne Moss	96	1	3.0
+94	Fairuza Balk	96	1	4.0
+95	Joe Pantoliano	96	1	5.0
+96	Jack Nicholson	95	1	1.0
+97	William Hurt	95	2	1.0
+98	Dustin Hoffman	95	2	1.0
+99	Minnie Driver	94	1	4.0
+100	Cole Sprouse	94	1	4.0
+101	Dylan Sprouse	94	1	5.0
+102	Susan Sarandon	94	2	6.0
+103	Christina Ricci	93	2	1.5
+104	Rachel Weisz	93	1	2.0
+105	Nia Long	93	2	2.5
+106	Michelle Yeoh	92	1	3.0
+107	Teri Hatcher	92	1	4.0
+108	Heather Donahue	91	1	1.0
+109	Winona Ryder	91	2	1.5
+110	Joshua Leonard	91	1	2.0
+111	Michael C. Williams	91	1	3.0
+112	Danny Glover	90	1	0.0
+113	Michael Clarke Duncan	89	1	4.0
+114	David Arquette	88	1	1.0
+115	Courteney Cox	88	1	3.0
+116	Jamie Kennedy	88	1	5.0
+117	Jerry O'Connell	88	1	6.0
+118	Jada Pinkett Smith	88	1	7.0
+119	Ving Rhames	87	1	5.0
+120	Gene Hackman	86	1	2.0
+121	Hugh Grant	85	1	2.0
+122	Rupert Everett	83	2	1.5
+123	Joseph Fiennes	83	1	2.0
+124	Jason Biggs	81	1	1.0
+125	Linda Hamilton	81	1	2.0
+126	Chris Klein	81	1	2.0
+127	Bette Midler	81	2	2.5
+128	Natasha Lyonne	81	1	3.0
+129	Thomas Ian Nicholas	81	1	4.0
+130	Mena Suvari	81	1	6.0
+131	Alyson Hannigan	81	1	9.0
+132	Eddie Kaye Thomas	81	1	18.0
+133	Seann William Scott	81	1	19.0
+134	Guy Pearce	79	1	3.0
+135	Kim Basinger	79	1	4.0
+136	David Duchovny	78	1	1.0
+137	Lili Taylor	78	1	4.0
+138	Tom Cruise	77	2	1.5
+139	Milla Jovovich	77	1	5.0
+140	Nathan Lane	76	1	1.0
+141	Lee Evans	76	1	2.0
+142	Robert Redford	75	1	1.0
+143	Val Kilmer	75	1	1.0
+144	Elisabeth Shue	75	1	2.0
+145	Jude Law	74	1	3.0
+146	Patrick Stewart	73	1	1.0
+147	Jonathan Frakes	73	1	2.0
+148	Brent Spiner	73	1	3.0
+149	LeVar Burton	73	1	4.0
+150	James Woods	73	1	4.0
+151	Michael Dorn	73	1	5.0
+152	Jamie Foxx	73	1	5.0
+153	Gates McFadden	73	1	6.0
+154	LL Cool J	73	1	6.0
+155	Marina Sirtis	73	1	7.0
+156	Donna Murphy	73	1	9.0
+157	Anthony Zerbe	73	1	10.0
+158	Clint Eastwood	72	2	1.0
+159	Saffron Burrows	72	1	1.0
+160	Will Ferrell	71	2	1.5
+161	Mira Sorvino	71	3	1.7
+162	Alan Rickman	71	1	3.0
+163	Matt LeBlanc	71	1	3.0
+164	Angela Lansbury	70	1	1.0
+165	Jennifer Aniston	70	2	1.0
+166	Michael Jai White	70	1	1.0
+167	James Earl Jones	70	1	3.0
+168	Viggo Mortensen	70	1	3.0
+169	Rene Russo	69	1	2.0
+170	Natasha Richardson	69	1	2.0
+171	Lindsay Lohan	69	1	3.0
+172	Casper Van Dien	68	1	1.0
+173	Martin Lawrence	68	1	1.0
+174	Anjelica Huston	68	1	2.0
+175	John C. Reilly	68	2	8.0
+176	Arnold Schwarzenegger	67	1	1.0
+177	Harry Connick, Jr.	67	1	2.0
+178	Elizabeth Hurley	67	1	2.0
+179	Kurt Russell	66	1	1.0
+180	Robert Downey, Jr.	66	1	3.0
+181	Rob Schneider	64	1	1.0
+182	Jeremy Irons	64	1	2.0
+183	Gabriel Byrne	64	1	5.0
+184	Demi Moore	63	1	1.0
+185	Freddie Prinze, Jr.	62	1	1.0
+186	Rachael Leigh Cook	62	1	2.0
+187	Jason Patric	62	1	2.0
+188	Gary Sinise	62	1	2.0
+189	Kirsten Dunst	60	1	1.0
+190	Gregory Smith	60	1	2.0
+191	Jay Mohr	60	1	3.0
+192	Phil Hartman	60	1	4.0
+193	Kevin Dunn	60	1	5.0
+194	Denis Leary	60	1	6.0
+195	Robert Carlyle	59	1	1.0
+196	Jamie Lee Curtis	59	1	1.0
+197	Charlize Theron	59	1	2.0
+198	Tom Wilkinson	59	1	2.0
+199	Mark Addy	59	1	3.0
+200	William H. Macy	58	2	4.5
+201	Rowan Atkinson	57	1	1.0
+202	Sylvester Stallone	56	1	1.0
+203	Harvey Keitel	56	1	2.0
+204	Adrien Brody	56	2	2.5
+205	Ray Liotta	56	1	3.0
+206	James Van Der Beek	55	1	1.0
+207	Vanessa Williams	55	2	1.0
+208	Paul Walker	55	1	3.0
+209	Ron Lester	55	1	4.0
+210	Scott Caan	55	1	5.0
+211	Amy Smart	55	1	7.0
+212	Eliel Swinton	55	1	8.0
+213	Robin Wright	54	1	2.0
+214	Claire Forlani	54	1	3.0
+215	Djimon Hounsou	54	1	3.0
+216	Vivica Fox	53	1	2.0
+217	Natascha McElhone	53	1	3.0
+218	Michael Beach	53	1	4.0
+219	Sean Bean	53	1	4.0
+220	Kel Mitchell	53	2	4.5
+221	Stellan Skarsgård	53	1	5.0
+222	Ryan Phillippe	52	2	1.5
+223	Julianne Moore	52	3	4.7
+224	Patricia Arquette	51	1	1.0
+225	Kevin Bacon	51	2	1.0
+226	Omar Sharif	51	1	1.0
+227	Kate Maberly	51	1	2.0
+228	Bridgette Wilson	50	1	5.0
+229	Peter Gallagher	50	1	6.0
+230	Jordana Brewster	49	1	1.0
+231	Chow Yun-Fat	49	1	2.0
+232	Clea DuVall	49	1	2.0
+233	Laura Harris	49	1	3.0
+234	Josh Hartnett	49	1	4.0
+235	Usher	49	1	10.0
+236	Elijah Wood	49	1	12.0
+237	Charlie Sheen	47	1	2.0
+238	Emma Thompson	47	1	10.0
+239	Pam Grier	46	1	1.0
+240	Jared Leto	46	1	1.0
+241	Edward Norton	46	1	2.0
+242	Alicia Witt	46	1	2.0
+243	Rebecca Gayheart	46	1	3.0
+244	Joshua Jackson	46	1	4.0
+245	Michael Rosenbaum	46	1	7.0
+246	Angela Bassett	45	1	1.0
+247	Jeff Daniels	45	1	1.0
+248	Chevy Chase	44	1	1.0
+249	Beverly D'Angelo	44	1	2.0
+250	Randy Quaid	44	1	3.0
+251	Ethan Embry	44	1	5.0
+252	Marisol Nichols	44	1	7.0
+253	Sharon Stone	43	1	2.0
+254	James Caviezel	42	1	4.0
+255	Ben Chaplin	42	1	5.0
+256	Woody Harrelson	42	1	8.0
+257	Elias Koteas	42	1	9.0
+258	Nick Nolte	42	1	10.0
+259	Michael Keaton	41	1	1.0
+260	Renée Zellweger	41	2	1.0
+261	Penelope Ann Miller	40	1	1.0
+262	Linda Hunt	40	1	3.0
+263	James Whitmore	40	1	4.0
+264	Katherine Heigl	39	1	0.0
+265	Chris Kattan	38	1	2.0
+266	Cate Blanchett	37	1	1.0
+267	Bill Pullman	36	1	1.0
+268	Bridget Fonda	36	1	2.0
+269	Oliver Platt	36	1	3.0
+270	Matt Dillon	35	1	2.0
+271	Denise Richards	35	1	4.0
+272	Linda Fiorentino	34	1	3.0
+273	Jason Lee	34	1	5.0
+274	Jason Mewes	34	1	6.0
+275	Chris Rock	34	1	7.0
+276	Molly Shannon	33	1	1.0
+277	Lisa Kudrow	33	1	2.0
+278	Paul Rudd	33	1	2.0
+279	Hank Azaria	32	1	2.0
+280	Paul Reubens	32	1	4.0
+281	Wes Studi	32	1	5.0
+282	Janeane Garofalo	32	1	6.0
+283	Lou Diamond Phillips	31	1	2.0
+284	Bokeem Woodbine	31	1	5.0
+285	Antonio Sabato Jr.	31	1	6.0
+286	Warren Beatty	30	1	1.0
+287	Jeff Bridges	30	2	1.0
+288	Michelle Pfeiffer	30	2	3.0
+289	Goldie Hawn	29	1	0.0
+290	Alicia Silverstone	29	2	1.5
+291	Juliette Lewis	28	1	1.0
+292	Sam Neill	28	1	2.0
+293	Giovanni Ribisi	28	1	4.0
+294	Kathleen Turner	27	1	1.0
+295	Christopher Lloyd	27	1	2.0
+296	John Goodman	26	2	1.5
+297	Burt Reynolds	26	1	3.0
+298	Don Cheadle	26	1	4.0
+299	Meryl Streep	25	2	5.0
+300	Diane Lane	25	1	10.0
+301	Jeremy Northam	24	1	2.0
+302	Omar Epps	24	1	2.0
+303	Richard T. Jones	24	1	3.0
+304	Josh Brolin	24	1	3.0
+305	Charles S. Dutton	24	1	5.0
+306	Bernie Mac	23	1	1.0
+307	Monica Calhoun	23	1	2.0
+308	Tim Robbins	23	1	2.0
+309	Irma P. Hall	23	1	3.0
+310	A.J. Johnson	23	1	3.0
+311	Alison Eastwood	23	1	4.0
+312	The Lady Chablis	23	1	5.0
+313	Alex Thomas	23	1	5.0
+314	Eli Marienthal	22	1	2.0
+315	Oprah Winfrey	21	1	1.0
+316	Kenan Thompson	21	1	1.0
+317	Thandiwe Newton	21	1	2.0
+318	Jeremy Blackman	19	1	1.0
+319	Jim Broadbent	19	1	2.0
+320	Leslie Nielsen	18	1	1.0
+321	Vince Vaughn	17	1	0.0
+322	Chris O'Donnell	17	1	1.0
+323	John Leguizamo	14	1	1.0
+324	Jennifer Esposito	14	1	4.0
+325	Doug E. Doug	13	1	2.0
+326	Jack Lemmon	11	1	1.0
+327	Walter Matthau	11	1	2.0
+328	Dennis Farina	11	1	2.0
+329	Steven Seagal	10	1	0.0
+330	Tammy Lauren	9	1	1.0
+331	James Marsden	8	1	10.0
+332	Lynn Whitfield	7	1	2.0
+333	Debbi Morgan	7	1	3.0
+334	Vondie Curtis-Hall	7	1	4.0
+335	Lisa Nicole Carson	7	1	6.0
+336	Bill Murray	6	2	1.0
+337	Dave Chappelle	6	1	1.0
+338	Jim Breuer	6	1	2.0
+339	Benicio del Toro	4	1	2.0
+340	Calista Flockhart	4	1	2.0
+341	Stanley Tucci	4	1	5.0
+342	Chayanne	2	1	2.0
