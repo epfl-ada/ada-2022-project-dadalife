@@ -21,9 +21,9 @@
 title: dadalife
 email: romain.pugin@epfl.ch
 description: Site is maintained by Romain Pugin. Created with Jekyll
-domain: romain46.github.io
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://romain46.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+domain: https://epfl-ada.github.io
+baseurl: /ada-2022-project-dadalife # the subpath of your site, e.g. /blog
+url: "https:/epfl-ada.github.io/ada-2022-project-dadalife" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  romain46
 author: romain46
 
@@ -98,9 +98,9 @@ yat:
 
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
-header_pages:
-   - index.html
-   - about.html
+# header_pages:
+#    - index.html
+#    - about.html
 #   - archives.html
 #   - categories.html
 #   - tags.html

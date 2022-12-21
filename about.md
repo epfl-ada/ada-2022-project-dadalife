@@ -6,7 +6,20 @@ layout: about
 title: About
 ---
 
-This project is realized by the amazing manon-james-micktaz-romain team !
+## The team
+This project was done for the CS-401 Applied Data Analysis course, in 2022. It's the work of the _dADAlife_ team.
+The group name is a reference to <a href="https://dadalife.com/">Dada Life</a>, an electronic music group.
 
-<h2> The fun</h2>
-<p>Amazing, HTML also works. This means we can do neat stuff, but we'll see for that another day I think. Now is time to go to bed :) </p>
+The team members are Manon Boissat, James Germanier, Michaël Tasev and Romain Pugin.
+
+The code to produce the analysis can be found <a href="https://github.com/epfl-ada/ada-2022-project-dadalife">here</a>.
+
+## Sources
+This project and website relies on the following sources:
+### Dataset
+* <a href="http://www.cs.cmu.edu/~ark/personas/">CMU Movies Dataset</a>
+* <a href="https://www.the-numbers.com/box-office-star-records/domestic/yearly-acting/">The Numbers</a>
+
+### Images
+* Website banner: <a href="https://www.pexels.com/">Pexel</a>
+* Favicon: <a href="https://www.pngwing.com/">PNGWing</a>

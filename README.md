@@ -14,5 +14,7 @@ bundle exec jekyll serve
 ```
 
 Sources:
-banner: https://www.pexels.com/
-favicon: https://www.pngwing.com/
+* CMU Dataset : http://www.cs.cmu.edu/~ark/personas/
+* The Numbers : https://www.the-numbers.com/
+* banner: https://www.pexels.com/
+* favicon: https://www.pngwing.com/
