@@ -23,6 +23,7 @@ What impacts the career of an actor or actress? When one must make decisions abo
 This project shall answer the preceding questions in a visual manner, making it both easy and satisfying to read the results.
 ```
 .
+├── images                           # Output images after our analysis, some used in our datastory
 ├── preprocessed_data                # Data after being preprocessed
 ├── raw_data                         # Data initially imported
 ├── src                              # Notebooks
