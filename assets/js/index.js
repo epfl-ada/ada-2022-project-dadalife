@@ -85,13 +85,13 @@ function predict_score(){
     if (a2!=="default"){
         actors.push(actor_dict[a2])
     }
-    if (a3!=="default"){
+    if (a3!=="default" && a3!==a2 && a3!==a1){
         actors.push(actor_dict[a3])
     }
     if (a4!=="default"){
         actors.push(actor_dict[a4])
     }
-    if (a5!=="default"){
+    if (a5!=="default" && a5!==a5 && a5!==a3 && a5!==a2 && a5!==a1){
         actors.push(actor_dict[a5])
     }
 
