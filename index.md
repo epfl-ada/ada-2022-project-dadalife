@@ -92,10 +92,45 @@ An interesting thing to see is how do some attributes of your next movie change 
 //TODO: Pas full sûr de cette section, on peut la tej en vrai
 
 # Now it's your turn
-Ok, now you give us your attributes and we tell you what to do, right now.
+Ok, now you give us your attributes, and we tell you what to do, right now.
 
 <div class="mb2">
     <div class="mb2" id="personal_selector">
+        <label for="age">Age: </label>
+        <input type="number" id="age" min="0" default="0"/>    
+        <br/>
+        <label for="total_actors">Casting size excluding you:</label>
+        <input type="number" id="total_actors" min="1" default="0"/>
+        <legend>Gender:</legend>
+        <div>
+          <input type="radio" id="gender" name="drone" value="1"
+                 checked>
+          <label for="huey">Woman</label>
+        </div>
+        <div>
+          <input type="radio" id="is_male" name="drone" value="0">
+          <label for="dewey">Man</label>
+        </div>
+        <br/>
+        <label for="actor1">Actor 1</label>
+        <select id="actor1">
+        </select>    
+        <br/>
+        <label for="actor2">Actor 2</label>
+        <select id="actor2">
+        </select>    
+        <br/>
+        <label for="actor3">Actor 3</label>
+        <select id="actor3">
+        </select>    
+        <br/>
+        <label for="actor4">Actor 4</label>
+        <select id="actor4">
+        </select>    
+        <br/>
+        <label for="actor5">Actor 5</label>
+        <select id="actor5">
+        </select>
     </div>
     <button onclick="predict_score()" class="nice_button">Go !</button><br/>
     <p id="predicted_chances"></p>
@@ -108,5 +143,7 @@ Here are the main results we were able to make in our analysis:
 # Conclusion
 Throughout this project, we did this and that.
 
+<script src="assets/js/lin_reg.js"></script>
+<script src="assets/js/actor_list.js"></script>
 <script src="assets/js/index.js"></script>
 <link rel="stylesheet" href="assets/css/custom.css"/>

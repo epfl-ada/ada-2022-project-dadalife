@@ -1,4 +1,3 @@
-
 const periods = ['1982_1986', '1987_1991', '1992_1996', '1997_2001', '2002_2006', '2007_2011']
 const genres = {
     "all": "All",
@@ -46,7 +45,6 @@ const features_lin_reg = {
     'nb_movies_before_this_movie': 'Number of movies the actor has already starred in'
 }
 
-
 function update_current_hist(){
 
     let p = document.getElementById("s_year").value
@@ -84,33 +82,128 @@ function UrlExists(url) {
     return http.status!==404;
 }
 
-function create_pers_selector(){
-    for(const [key, val] of Object.entries(features_lin_reg)){
-        let label = `<label for="${key}">${val}</label>`
-        let sel = `<select id="${key}"></select>`
-        document.getElementById("personal_selector").insertAdjacentHTML("beforeend", label)
-        document.getElementById("personal_selector").insertAdjacentHTML("beforeend", sel)
-        document.getElementById("personal_selector").insertAdjacentHTML("beforeend", "<br/>")
-    }
-}
-
-
 function create_pers_selector_options(){
-    for(const [key, val] of Object.entries(features_lin_reg)){
-        for(let i=0; i<periods.length; i++){
-            let opt = `<option value="${periods[i]}">${periods[i]}</option>`
-            document.getElementById(key).insertAdjacentHTML("beforeend", opt)
+    for(let i=1; i<6;i++){
+        let opt = `<option value="default">None</option>`
+        document.getElementById(`actor${i}`).insertAdjacentHTML("beforeend", opt)
+        for (const [key, val] of Object.entries(actor_dict)){
+            opt = `<option value="${val}">${key}</option>`
+            document.getElementById(`actor${i}`).insertAdjacentHTML("beforeend", opt)
         }
     }
 }
 
 
 function predict_score(){
-    let rnd = Math.round(Math.random()*100)
-    document.getElementById("predicted_chances").textContent = `Your predicted chances of becoming famous are ${rnd}%`
+    // first validate all inputs
+
+    let actors = []
+    const a1 = document.getElementById("actor1").value
+    const a2 = document.getElementById("actor2").value
+    const a3 = document.getElementById("actor3").value
+    const a4 = document.getElementById("actor4").value
+    const a5 = document.getElementById("actor5").value
+
+    if (a1!=="None"){
+        actors.push(a1)
+    }
+    if (a1!=="None"){
+        actors.push(a2)
+    }
+    if (a1!=="None"){
+        actors.push(a3)
+    }
+    if (a1!=="None"){
+        actors.push(a4)
+    }
+    if (a1!=="None"){
+        actors.push(a5)
+    }
+
+    // throw warning if nothing is fullfilled
+    const total_actors = document.getElementById("total_actors").value + 1
+    const age = document.getElementById("age").value + 1
+    if (age < 0 || age >= 115){
+        return
+    }
+    if (total_actors < 0 || total_actors >= 22){
+        return
+    }
+
+
+
+    let score = compute_score(actors)
+    document.getElementById("predicted_chances").textContent = `Your predicted chances of becoming famous are ${Math.round(score*100)}%`
 }
 
+
+function compute_score(actorList){
+
+    // throw warning if nothing is fullfilled
+    const total_actors = document.getElementById("total_actors").value + 1
+    const age = document.getElementById("age").value + 1
+    const is_woman = document.getElementById("gender").checked
+
+    const [scores, scores_f, scores_m] = extract_scores_list(actorList)
+
+    if (is_woman){
+        scores_f.push(0)
+    }else{
+        scores_f.push(0)
+    }
+
+    let score = 0
+    // overall participation
+    score += weights.cast_max * Math.max(scores)
+    score += weights.cast_mean * mean(scores)
+    score += weights.cast_median * median(scores)
+    score += weights.cast_nb_famous_actors * actorList.length
+    score += weights.cast_prop_famous_actors * actorList.length / total_actors
+    // woman
+    score += weights.F_max * Math.max(scores_f)
+    score += weights.F_mean * mean(scores_f)
+    score += weights.F_median * median(scores_f)
+    score += weights.F_nb_famous_actors * scores_f.length
+    score += weights.F_prop_famous_actors * scores_f.length / total_actors
+    // man
+    score += weights.M_max * Math.max(scores_m)
+    score += weights.M_mean * mean(scores_m)
+    score += weights.M_median * median(scores_m)
+    score += weights.M_nb_famous_actors * scores_m.length
+    score += weights.M_prop_famous_actors * scores_m.length / total_actors
+
+    score += weights.m_release_year * 2013
+    score += weights.actor_age * age
+    score += is_woman ? weights.actor_gender_cat : 0
+
+    return score
+}
+
+
+// taken from stack-overflow, used to compute medians
+function median(numbers) {
+    if (numbers.length === 0){
+        return 0
+    }
+    const sorted = Array.from(numbers).sort((a, b) => a - b);
+    const middle = Math.floor(sorted.length / 2);
+
+    if (sorted.length % 2 === 0) {
+        return (sorted[middle - 1] + sorted[middle]) / 2;
+    }
+
+    return sorted[middle];
+}
+
+// taken from stackoverflow. Comuptes mean of an array
+function mean(numbers){
+    if (numbers.length === 0){
+        return 0
+    }
+    return numbers.reduce((a, b) => a + b, 0) / numbers.length
+}
+
+create_pers_selector_options()
 init_select()
 update_current_hist()
-create_pers_selector()
 create_pers_selector_options()
