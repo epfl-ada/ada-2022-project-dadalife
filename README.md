@@ -5,6 +5,8 @@ It is built using [jekyll](https://jekyllrb.com/) with [Yet Another Theme](https
 
 The page is publicly accessible from [here](https://epfl-ada.github.io/ada-2022-project-dadalife/).
 
+The JS code that computes what is displayed on the website is located under ```assets/js```
+
 If you want to run it locally :
 ```bash
 git clone git@github.com:epfl-ada/ada-2022-project-dadalife.git

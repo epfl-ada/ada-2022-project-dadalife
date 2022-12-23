@@ -18,24 +18,19 @@ Hollywood’s most famous actor or actress? Then you stumbled on the right websi
 learn to organize your career, who to play with, what kind of film to star in and other tricks to boost your 
 popularity to the top!
 
-<div></div>
-
 <div class="row mt2">
     <div class="column left">
         <h2 style="text-align: left">Fame definition</h2>
         <p>When can somebody be considered a Hollywood star? The philosophical answer to this question is out of the scope 
-of this analysis. However, we decide to use a numerical value downloadable from 
-<a href="https://www.the-numbers.com/box-office-star-records/domestic/yearly-acting/">The Numbers</a>. Their ranking is based on 
-the Box-Office revenue (BOR) of the films each actor played in during the past three years.</p>
-
-<p>This metric follows the idea that when an actor has played in a movie that generated a large BOR, the movie has a lot
-of visibility which increases the fame of the cast.</p>
-
-<p>We group movies by lustrum (1 lustrum = 5 years) to ease comparisons and for better visualisation purposes. We define
-'becoming famous' as the first lustrum in which you appear in <i>The Numbers</i>, after which you are considered famous for
-the rest of your life. We also added a weight decaying over time, to represent that a recent high BOR movie will have a
-greater impact on your fame than an old movie.</p>
-
+        of this analysis. However, we decide to use a numerical value downloadable from 
+        <a href="https://www.the-numbers.com/box-office-star-records/domestic/yearly-acting/">The Numbers</a>. Their ranking is based on 
+        the Box-Office revenue (BOR) of the films each actor played in during the past three years.</p>
+        <p>This metric follows the idea that when an actor has played in a movie that generated a large BOR, the movie has a lot
+        of visibility which increases the fame of the cast.</p>
+        <p>We group movies by lustrum (1 lustrum = 5 years) to ease comparisons and for better visualisation purposes. We define
+        'becoming famous' as the first lustrum in which you appear in <i>The Numbers</i>, after which you are considered famous for
+        the rest of your life. We also added a weight decaying over time, to represent that a recent high BOR movie will have a
+        greater impact on your fame than an old movie.</p>
     </div>
     <div class="column right">
         <img class="mt3" src="assets/images/score.svg" alt="comparison with google trends"/>
@@ -63,9 +58,9 @@ as shown on the graph below, the 2 most appropriate genres, regardless of whethe
 
 <img src="assets/images/index.png" alt="Film genre revelation"/>
 
-Now, let's perform a logistic regression on all movies to have a better idea of what attributes contribute most to 
-revealing actors and actresses. The graph on the left shows the paramters that help actors become famous, and on the 
-right we can see how these parameters evolved in the second film after an actor·ress revelation. This way you know what
+Now, let's perform a logistic regression to have a better idea of what co-acting attributes contribute most to 
+revealing actors and actresses. The graph on the left shows the parameters that help actors become famous, and on the 
+right we can see how these parameters evolved in the second film after an actor·ress' revelation. This way you know what
 to focus on to become famous, but also what you should pay attention to when preparing your next movie.
 
 <img src="assets/images/regression_single.png" alt="ladder graph revelation features"/>
@@ -74,7 +69,7 @@ to focus on to become famous, but also what you should pay attention to when pre
 There’s a lot to say and see on the previous graph. The second feature says a lot about our society; As there are more 
 famous male actors in the revelation movies, you have more chances to be revealed by actors than by actresses. Even
 worse, the median score of the male casting of the RM has a positive weight while the median 
-score of the female casting of the RM has a negative weight !
+score of the female casting of the RM has a negative weight!
 
 The casting’s average score in RM has a relatively large positive weight, so you would be tempted to play with a lot of
 famous actors. But be careful, the ratio of famous actors in the RM has a negative weight so a trade-off has to be made
@@ -84,12 +79,22 @@ choosing the famous actors you'd like to play with.
 
 <img src="assets/images/regression_comparaison.png" alt="ladder graph revelation features"/>
 
-### Now that I am famous, how shall I choose my next perfomance?
-Based on the graph on the right, it is clear that the strategy to adopt is not the same. Some features remain important, some change drastically. Here are some of the main changes:
-* The most important ATTRIBUTE_1 is even more important now, you should really try to maximise it.
-* We can note ATTRIBUTE_QUI_DEVIENT_TREEES_NEGATIF to really avoid now that you’re famous.
-* ATTRIBUTE_QUI_DEVIENT_2E_+_IMPORTANT was to avoid is possible, it is now the second most important, don't forget to change that
-* Same vibe for ATTRIBUTE_QUI_DEVIENT_4E_+_IMPORTANT
+### Now that I am famous, how shall I choose my next performance?
+
+The number of famous male actors you should play with is even more important now to stay at the top.
+
+We can note that the total number of famous actors the revealed actor has played with within the past three years has 
+dropped dramatically. Famous actors may now out-shadow you, so be careful about that now that you’re at the top.
+
+The weight of the number of famous male actors is now even higher than before while the one of female actors is 
+constant. However, the importance of the median score of the male casting has decreased, likewise for the female casting,
+but the latter is still negative!
+
+Last but not least, the weight of the number of famous actors in the RM is one of the features that has the largest
+increase! This shows that networking has a major impact in this industry. Remember how you had to be careful about the
+number of famous actors you played with when you were unknown? Now you should look for large casts with a lot of 
+famous actors!
+
 
 # Who are the career boosters?
 
@@ -120,7 +125,7 @@ Action, Mystery_ is taken to lighten the graph and help visualize what’s happe
 actresses and the films connecting those actors are the edges. Nodes change color according to the popularity of the 
 actor for a given year.
 
-The nodes are at first invisible. When the actor·ress playes his·her first film, the nodes becomes grey. A node then  
+The nodes are at first invisible. When the actor·ress plays his·her first film, the nodes becomes grey. A node then  
 becomes orange upon becoming famous. The year after the node becomes red since he·she is famous.
 It is interesting to see that a lot of revelations start directly in orange meaning that they are revealed in their 
 first movie! A second observation is that the heart of the graph is very strongly connected, which emphasizes 
