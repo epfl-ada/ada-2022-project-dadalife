@@ -4,7 +4,7 @@
 
 layout: home
 title: Homepage
-heading: Road to being a star !
+heading: Road to being a star!
 subheading: ""
 banner: "/assets/images/banners/hwbanner.jpg"
 ---
@@ -13,15 +13,15 @@ banner: "/assets/images/banners/hwbanner.jpg"
 
 # New in the Hollywood industry? Here's how to make it to the top!
 
-You just got your first background character role, and you’re wondering how you should play your move to become 
-Hollywood’s most famous actor or actress? Then you stumbled on the right website: in the following sections, we’ll 
-show you how to organize your career, who to play with, what kind of film to star in and other tricks to boost your 
+You just got your first background character role, and you’re wondering how you should play your moves to become 
+Hollywood’s most famous actor or actress? Then you stumbled on the right website: in the following sections, you’ll 
+learn to organize your career, who to play with, what kind of film to star in and other tricks to boost your 
 popularity to the top!
 
 
 ## Fame definition
 
-When can we say that you are a Hollywood star? The philosophical answer to this question is out of the scope 
+When can somebody be considered a Hollywood star? The philosophical answer to this question is out of the scope 
 of this analysis. However, we decided to use a numerical value downloadable from 
 [The Numbers](https://www.the-numbers.com/box-office-star-records/domestic/yearly-acting/). Their ranking is based on 
 the Box-Office revenue (BOR) of the films each actor played in during the past three years.
@@ -41,7 +41,7 @@ actors·resses.
 <img src="assets/images/trends.svg" alt="comparison with google trends"/>
 <br/>
 
-# What now?
+# Roadmap
 
 Now that we have a basis on the metric for fame, we will be able to give you tips and tricks to reach the top of the Hollywood
 food chain. But how? We will first have a look at the attributes of movies that have a revelation, as well as attributes of 
@@ -69,13 +69,16 @@ We can see that coacting with a cast having a high score will negatively affect 
 becoming famous. This is an interesting fact, one could think that playing with a famous cast would reveal you’re 
 actually shadowed by it !
 
-Revelation movie \
+### Becoming famous
 We can see that ATTRIBUTE_1 has a high positive impact, meaning the more ATTRIBUTE_1 a movie has, the more likely it is to create a revelation. On the contrary, ATTRIBUTE_99 has a high negative impact, meaning you should avoid a movie that has a high ATTRIBUTE_99. ATTRIBUTE_50 however has close to no effect, no particular advice about this attribute.
 With this, we can already come up with a few tips on what to prioritize and what to avoid. Go for ATTRIBUTE_1, ATTRIBUTE_2, ATTRIBUTE_3 movies, they will maximise your chances to become famous, and avoid ATTRIBUTE_99, ATTRIBUTE_98, ATTRIBUTE_97, they will negatively impact your likelihood to become famous.
 
-Now famous, which film should I go for?\
-Based on the graph on the right, it is clear that the strategy to adopt is not the same. Some features remain important,
-some change drastically. We can note ATTRIBUTE_QUI_DEVIENT_TREEES_NEGATIF to really avoid now that you're famous.
+### Now that I am famous, how shall I choose my next perfomance?
+Based on the graph on the right, it is clear that the strategy to adopt is not the same. Some features remain important, some change drastically. Here are some of the main changes:
+* The most important ATTRIBUTE_1 is even more important now, you should really try to maximise it.
+* We can note ATTRIBUTE_QUI_DEVIENT_TREEES_NEGATIF to really avoid now that you’re famous.
+* ATTRIBUTE_QUI_DEVIENT_2E_+_IMPORTANT was to avoid is possible, it is now the second most important, don't forget to change that
+* Same vibe for ATTRIBUTE_QUI_DEVIENT_4E_+_IMPORTANT
 
 # Who are the career boosters?
 
@@ -100,23 +103,25 @@ are displayed.
 </div>
 
 
-# Fame seen as an epidemy
-We could see that acting with famous people will help you become famous. This simple fact reminds us another kind of network phenomenon, contagion. How close is it from a illness contagion, aka an epidemy?
+# How does fame evolve over time ?
+Let’s guide you through the following animation. The subset of films having the PCA genre _Thriller, Crime Thriller,
+Action, Mystery_ is taken to lighten the graph and help visualize what’s happening.  The nodes represent the actors and 
+actresses and the films connecting those actors are the edges. Nodes change color according to the popularity of the 
+actor for a given year.
 
+The nodes are at first invisible. When the actor·ress playes his·her first film, the nodes becomes grey. A node then  
+becomes orange upon becoming famous. The year after the node becomes red since he·she is famous.
+It is interesting to see that a lot of revelations start directly in orange meaning that they are revealed in their 
+first movie! A second observation is that the heart of the graph is very strongly connected, which emphasizes 
+the importance of networking in this industry.
 <div class="center-children">
     <img src="assets/images/GIF_Connectivity.gif" class="mb2" alt="connectivity evolution gif"/>
 </div>
 
-Jsp si c'est faisable en vrai, faut vrm qu'on se penche là dessus. need stuff to generate NX graph, I'll make it 
-interactive later.
-
-# How to stay on top ?
-An interesting thing to see is how do some attributes of your next movie change with regard to the movie that made you famous. Here is a "ladder" graph, just like our regression from before. This changed, this changed, this stayed the same. //TODO: ajouter les trucs
-
 
 # Now it's your turn
 Year is 2013. You don't know it yet, but you belong to the set of people that are made to be a star. We provide you 
-this tool in order for you to estimate how good a film will be for your career given its casting. 
+this tool in order for you to estimate how good a film could be for your career given its casting. 
 
 <div class="mb2" id="personal_selector">
     <div class="row">
@@ -181,7 +186,7 @@ this tool in order for you to estimate how good a film will be for your career g
         </div>
     </div>
     <div class="center-children">
-        <button id="button_predict" onclick="predict_score()" class="nice_button">Make me famous !</button><br/>
+        <button id="button_predict" onclick="predict_score()" class="nice_button"> Worth a shot? </button><br/>
     </div>
     <p id="predicted_chances"></p>
 </div>

@@ -10,7 +10,7 @@ title: About
 <link rel="stylesheet" href="assets/css/about.css"/>
 
 ## The team
-This project was done for the <a href="ada.epfl.ch">CS-401 Applied Data Analysis course</a>, in 2022. It's the work 
+This project was done for the <a href="https://ada.epfl.ch">CS-401 Applied Data Analysis course</a>, in 2022. It's the work 
 of the _dADAlife_ team.
 The group name is a reference to <a href="https://dadalife.com/">Dada Life</a>, an electronic music group.
 
