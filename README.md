@@ -29,9 +29,9 @@ This project shall answer the preceding questions in a visual manner, making it 
 ├── raw_data                          # Data initially imported
 │
 ├── .gitignore                        # Files to be ignored when pushing from local to remote
-├── README.md
+├── README.md                         # this.
 ├── career_booster.ipynb              # Analysis of revelating movies, and career boosters
-├── coacting_features.ipynb           # Logistic regression to find importance of features
+├── coacting_features.ipynb           # Find importance of features
 ├── generate_hists.ipynb              # Used for the data story
 ├── insight_coacting_impact.ipynb     # Analysis on the impact of coacting to become famous
 ├── milestone_2.ipynb                 # Milestone 2 analysis
@@ -41,11 +41,10 @@ This project shall answer the preceding questions in a visual manner, making it 
 
 - ```raw_data``` is composed from the imported datasets described below, CMU Movie Summary Corpus and The Numbers. 
 - ```preprocessed_data``` is composed of data after being handled by ```preprocessing.ipynb```, e.g. cleaning the data, filtering and thoughtfully dropping some entries.
-- ```src``` contains the notebooks to run:
-    - ```preprocessing.ipynb``` takes raw data as input and outputs preprocessed data, suitable for analysis.
-    - ```coacting_impact.ipynb``` compares the impact of blou.
-    - ```fame_coacting_features.ipynb``` computes a logistic regression over movies that revelated some actors to output weights on which features are important
-    - ```graph_career_booster.ipynb``` looks closely at actors called career boosters, aka actors that starred in many movie that revelated other actors. Typically, you would want to star with a career booster.
+- ```preprocessing.ipynb``` takes raw data as input and outputs preprocessed data, suitable for analysis.
+- ```career_booster.ipynb``` looks closely at actors called career boosters, aka actors that starred in many movie that revelated other actors.
+- ```coacting_features.ipynb``` computes a logistic regression over movies that revelated some actors to output weights on which features are important
+- ```insight_coacting_impact.ipynb``` generates graphs to give insights on the impact of coacting.
 
 
 ## Datasets
