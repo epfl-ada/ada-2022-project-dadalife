@@ -8,6 +8,8 @@ heading: Road to being a star !
 subheading: ""
 banner: "/assets/images/banners/hwbanner.jpg"
 ---
+<link rel="stylesheet" href="assets/css/custom.css"/>
+
 
 # New in the Hollywood industry? Here's how to make it to the top!
 
@@ -35,27 +37,37 @@ greater impact on your fame than an old movie.
 We compare our metric with Google Trends to check whether it is suitable, below is a graph comparing a few 
 actors·resses.
 
-<img src="assets/images/img/score.svg" alt="comparison with google trends"/>
-<img src="assets/images/img/trends.svg" alt="comparison with google trends"/>
+<img src="assets/images/score.svg" alt="comparison with google trends"/>
+<img src="assets/images/trends.svg" alt="comparison with google trends"/>
+<br/>
 
 # What now?
 
-Now we have a basis on the metric for fame, we will be able to give you tips and tricks to climb to the top of Hollywood
-fame. But how? We will first have a look at the attributes of movies that have a revelation, as well as attributes of 
+Now that we have a basis on the metric for fame, we will be able to give you tips and tricks to reach the top of the Hollywood
+food chain. But how? We will first have a look at the attributes of movies that have a revelation, as well as attributes of 
 actors·resses when they are revealed. Then we will look at which actors·resses boosted others to give you advice about 
-the cast. We will also show be an analogy with epidemies and how graphs evolve. Then we will give you hints on what to 
-do once you become famous, and how to stay famous. Finally, we will predict who you should play with based on your 
-attributes, to maximise your chances to become famous right now.
+the cast. We will also show how important it is to stay strongly connected to other actors. Then we will give you hints on what to 
+do once you become famous, namely how to stay famous. Finally, we will predict who you should play with based on your 
+attributes, to maximise your chances to become famous.
 
 
 # What kind of films will make you famous?
 
-We perform a logistic regression on all movies, and here are the attributes that contributed the most (and the least) towards 
-revealing at least an actor·ress. On the right is another regression, but based on the second movie that actors·resses
-did after being revealed. This way we can first analyse what to prioritise to become famous, and give tips on how to
-approach the next movie.
+The first thing to say is that you should start with films that have the biggest audience. Comedy or action films are, 
+as shown on the graph below, the 2 most appropriate genres, regardless of whether you're a man or a woman.
+
+<img src="assets/images/index.png" alt="Film genre revelation"/>
+
+Now, let's perform a logistic regression on all movies to have a better idea of what attributes contribute most to 
+revealing actors and actresses. The graph on the left shows the paramters that help actors become famous, and on the 
+right we can see how these parameters evolved in the second film after an actor·ress revelation. This way you know what
+to focus on to become famous, but also what you should pay attention to when preparing your next movie.
 
 <img src="assets/images/logistic_regression_comparison.svg" alt="ladder graph revelation features"/>
+
+We can see that coacting with a cast having a high score will negatively affect your probability of 
+becoming famous. This is an interesting fact, one could think that playing with a famous cast would reveal you’re 
+actually shadowed by it !
 
 Revelation movie \
 We can see that ATTRIBUTE_1 has a high positive impact, meaning the more ATTRIBUTE_1 a movie has, the more likely it is to create a revelation. On the contrary, ATTRIBUTE_99 has a high negative impact, meaning you should avoid a movie that has a high ATTRIBUTE_99. ATTRIBUTE_50 however has close to no effect, no particular advice about this attribute.
@@ -67,11 +79,16 @@ some change drastically. We can note ATTRIBUTE_QUI_DEVIENT_TREEES_NEGATIF to rea
 
 # Who are the career boosters?
 
-Let’s start with its definition. A career booster is an actor·ress that is already famous during a given lustrum and has
-co-acted with an actor·ress that has been revealed during that lustrum. The graph presents the career boosters for a
-given lustrum and for a given genre with the y-axis being the (degree centrality  / betweeness centrality).
-In our model, this centrality represents the /[explain the right centrality/].
-//TODO: Describing stuff, what is shown on the graph, etc...
+Let’s start with definitions:
+* A **career booster** is an actor·ress that is already famous during a given lustrum and has co-acted with an actor·ress 
+that has been revealed during that lustrum.
+* The **degree centrality** is defined as the number of links incident upon a node. In this analysis the nodes are actors 
+and the links (also called edges) are the films that link two actors.
+
+
+By selecting the lustrum and the PCA genre in the dropdown buttons below, actors with the highest degree centrality for 
+a given lustrum and PCA genre are displayed. By hovering over the bars, different attributes of this _career booster_ 
+are displayed.
 
 <div id="img-container" class="img-container">
     <div class="mb2">
@@ -82,13 +99,14 @@ In our model, this centrality represents the /[explain the right centrality/].
     <p id="hist_error">No data for given selection</p>
 </div>
 
-On peut dire que most ces acteurs c'est pas iron man mais plustot que'est-ce qu'on a fait au bon dieux / 
-le père noel est une ordure. Ou the mask.
 
 # Fame seen as an epidemy
 We could see that acting with famous people will help you become famous. This simple fact reminds us another kind of network phenomenon, contagion. How close is it from a illness contagion, aka an epidemy?
-//TODO: mettre le GIF que James est en train de faire <3
-//TODO: maybe ajouter un GIF d'un modèle SIR pour la comparaison ?
+
+<div class="center-children">
+    <img src="assets/images/GIF_Connectivity.gif" class="mb2" alt="connectivity evolution gif"/>
+</div>
+
 Jsp si c'est faisable en vrai, faut vrm qu'on se penche là dessus. need stuff to generate NX graph, I'll make it 
 interactive later.
 
@@ -96,11 +114,9 @@ interactive later.
 An interesting thing to see is how do some attributes of your next movie change with regard to the movie that made you famous. Here is a "ladder" graph, just like our regression from before. This changed, this changed, this stayed the same. //TODO: ajouter les trucs
 
 
-## 15 years later, what do you do?
-//TODO: Pas full sûr de cette section, on peut la tej en vrai
-
 # Now it's your turn
-Ok, now tell us who you are, and we tell you how likely you would have been famous shooting with some people in 2013.
+Year is 2013. You don't know it yet, but you belong to the set of people that are made to be a star. We provide you 
+this tool in order for you to estimate how good a film will be for your career given its casting. 
 
 <div class="mb2" id="personal_selector">
     <div class="row">
@@ -171,13 +187,12 @@ Ok, now tell us who you are, and we tell you how likely you would have been famo
 </div>
 
 
-# Results
-Here are the main results we were able to make in our analysis:
-
 # Conclusion
-Throughout this project, we did this and that.
+The take home advices to become famous is that it's important to stay connected to famous people. However, you may stay
+in the shadow of the too famous ones, hence don't go for a movie where the star of the show is way out of your league. 
+Finally, aim for a comedy or an action film, and don't loose hope if you don't make it after your first film, as the
+second one might be the good one.
 
 <script src="assets/js/lin_reg.js"></script>
 <script src="assets/js/actor_list.js"></script>
 <script src="assets/js/index.js"></script>
-<link rel="stylesheet" href="assets/css/custom.css"/>

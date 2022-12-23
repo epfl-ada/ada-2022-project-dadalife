@@ -19,7 +19,9 @@ const genres = {
     "Environmental_Science_Nature_Gross_out_Grossout_film": "Environmental, Science, Nature, Gross out, Grossout film",
 }
 
-
+/**
+ * Sets the url of the iframe displaying the histogram to the selected value
+ */
 function update_current_hist(){
 
     let p = document.getElementById("s_year").value
@@ -36,7 +38,9 @@ function update_current_hist(){
     }
 }
 
-//function to set the selectors options. should be called only once otherwise shit will happen
+/**
+ * Function to set the selectors options for the histograms. Should be called only once at page load.
+ */
 function init_select() {
     for(let i=0; i<periods.length;i++){
         let p = periods[i]
@@ -50,6 +54,12 @@ function init_select() {
     }
 }
 
+/**
+ * Returns true if the url is valid
+ * @param url the url to test
+ * @returns {boolean} wether the reply is not a 404
+ * @constructor
+ */
 function UrlExists(url) {
     let http = new XMLHttpRequest();
     http.open('HEAD', url, false);
@@ -58,7 +68,7 @@ function UrlExists(url) {
 }
 
 /**
- *
+ * Creates the options for the actor selectors used in the predictor. Should be called only once at page load
  */
 function create_pers_selector_options(){
     for(let i=1; i<6;i++){
@@ -71,7 +81,8 @@ function create_pers_selector_options(){
     }
 }
 
-/** Gets user input, sanitises it and calls compute_score to predict the chances to become famous given user input.
+/**
+ * Gets user input, sanitises it and calls compute_score to predict the chances to become famous given user input.
  *
  * @returns percentage of chances to become famous given user input.
  */
@@ -108,18 +119,41 @@ function predict_score(){
         document.getElementById("predicted_chances").textContent = `Please fill in valid values.`
         return
     }
-
     if (total_actors <= 0 || total_actors >= 22 ){
         document.getElementById("predicted_chances").textContent = `Please fill in valid values.`
         return
     }
+    if (actors.length == 0){
+        return
+    }
 
     let score = compute_score(actors, total_actors, age)
-    document.getElementById("predicted_chances").textContent = `Your predicted chances of becoming famous are ${Math.round(score*100)}%`
+    let score_ref = compute_score_alone(total_actors, age)
+
+    // if the coacting lets you perform better by between 10% and 40%, recommend a bit, if by more, recommend strongly,
+    // if less,
+    let text =""
+
+    let rel_increase = ((score - score_ref)/score_ref * 100).toFixed(2)
+
+    if(score<score_ref){
+        text += `This co-acting would be ${((1-score/score_ref)*100).toFixed(2)}% less profitable than playing`
+        text += " alone, don't do it."
+    }else if (score<score_ref*1.1){
+        text += `This casting is clearly not worth it, it's only a ${rel_increase}% increase over playing alone.`
+    } else if (score_ref*1.1<= score < score_ref*1.4){
+        text += `This casting can do, it's ${rel_increase}% better than if you played alone. However, you can surely`
+        text += "find better!"
+    } else if (score_ref * 1.4<= score) {
+        text += `Wow ! This may be the biggest opportunity you'll have. It's ${rel_increase}% better than playing alone.`
+        text += " Go for it!"
+    }
+    document.getElementById("predicted_chances").textContent = text
 }
 
 
-/** computes the predicted score for a starting actor to be famous given a certain cast.
+/**
+ * Computes the predicted score for a starting actor to be famous given a certain cast.
  *
  * @param actorList the list of famous actors in the cast
  * @param total_actors the total numbers of actors in the cast
@@ -163,11 +197,15 @@ function compute_score(actorList, total_actors, age){
     return Math.exp(score)/(1+Math.exp(score))
 }
 
+function compute_score_alone(total_actors, age){
+    return compute_score([], total_actors, age)
+}
+
 
 /** computes the median of an array, taken from stackoverflow
  *
  * @param numbers the array to return the median of
- * @returns {unknown|number} the median of the array
+ * @returns {unknown|number} the median of the array, 0 if array is empty
  */
 function median(numbers) {
     if (numbers.length === 0){
@@ -179,11 +217,14 @@ function median(numbers) {
     if (sorted.length % 2 === 0) {
         return (sorted[middle - 1] + sorted[middle]) / 2;
     }
-
     return sorted[middle];
 }
 
-// taken from stackoverflow. Computes mean of an array
+/** computes the mean of an array
+ *
+ * @param numbers the array to computes the mean of
+ * @returns {number} the mean of the values in the array. 0 if array is empty
+ */
 function mean(numbers){
     if (numbers.length === 0){
         return 0
@@ -191,11 +232,15 @@ function mean(numbers){
     return numbers.reduce((a, b) => a + b, 0) / numbers.length
 }
 
+/** returns the max of an array
+ *
+ * @param numbers the array we want to get the max of
+ * @returns {number} the biggest value in the array, 0 if the array is empty
+ */
 function max(numbers){
     if (numbers.length === 0){
         return 0
     }
-
     return Math.max.apply(Math, numbers)
 }
 
