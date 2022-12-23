@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: dadalife
+title: Become a star
 email: romain.pugin@epfl.ch
 description: Site is maintained by Romain Pugin. Created with Jekyll
 domain: https://epfl-ada.github.io
