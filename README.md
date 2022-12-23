@@ -23,13 +23,16 @@ What impacts the career of an actor or actress? When one must make decisions abo
 This project shall answer the preceding questions in a visual manner, making it both easy and satisfying to read the results.
 ```
 .
-├── images                           # Output images after our analysis, some used in our datastory
-├── preprocessed_data                # Data after being preprocessed
-├── raw_data                         # Data initially imported
-├── src                              # Notebooks
-│   ├── preprocessing.ipynb          # Cleaning and filtering raw_data to output preprocessed_data
-│   └── main.ipynb                   # Main notebook
-├── .gitignore                       # Files to be ignored when pushing from local to remote
+├── images                            # Output images after our analysis, some used in our datastory
+├── preprocessed_data                 # Data after being preprocessed
+├── raw_data                          # Data initially imported
+├── src                               # Notebooks
+│   ├── preprocessing.ipynb           # Cleaning and filtering raw_data to output preprocessed_data
+│   ├── coacting_impact.ipynb         # Analysis on the impact of coacting to become famous
+│   ├── fame_coacting_features.ipynb  # Logistic regression to find importance of features
+│   ├── graph_career_booster.ipynb    # Analysis of revelating movies, and career boosters
+│   └── preprocessing.ipynb           # Cleaning and filtering raw_data to output preprocessed_data
+├── .gitignore                        # Files to be ignored when pushing from local to remote
 └── README.md
 ```
 
@@ -37,7 +40,9 @@ This project shall answer the preceding questions in a visual manner, making it 
 - ```preprocessed_data``` is composed of data after being handled by ```preprocessing.ipynb```, e.g. cleaning the data, filtering and thoughtfully dropping some entries.
 - ```src``` contains the notebooks to run:
     - ```preprocessing.ipynb``` takes raw data as input and outputs preprocessed data, suitable for analysis.
-    - ```main.ipynb``` is the main notebook that produces analysis based on suitable data, this is where the analysis happens.
+    - ```coacting_impact.ipynb``` compares the impact of blou.
+    - ```fame_coacting_features.ipynb``` computes a logistic regression over movies that revelated some actors to output weights on which features are important
+    - ```graph_career_booster.ipynb``` looks closely at actors called career boosters, aka actors that starred in many movie that revelated other actors. Typically, you would want to star with a career booster.
 
 
 ## Datasets
