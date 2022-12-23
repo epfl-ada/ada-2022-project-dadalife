@@ -31,7 +31,7 @@ gender_array = np[]
 def retrieve_movie_features(row, arr, gender_arr):
     type_f, function = row.split('_')
     values = list(arr)
-    if type_f == 'F' | type_f == 'M':
+    if type_f == 'F' or type_f == 'M':
         values = []
         for x, g in zip(arr, gender_arr):
             if g == type_f:
@@ -47,7 +47,7 @@ def retrieve_movie_features(row, arr, gender_arr):
     if function == 'nb_famous_actors' or function == 'nb_actors_already_played':
         return np.count_nonzero(values)
     if function == 'prop_famous_actors' or function == 'prop_nb_movies':
-        if type_f == 'F' | type_f == 'M':
+        if type_f == 'F' or type_f == 'M':
             try:
                 return (np.count_nonzero(values))/np.count_nonzero(values)
             except:
