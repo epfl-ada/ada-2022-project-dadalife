@@ -3,7 +3,7 @@ const periods = ['1982_1986', '1987_1991', '1992_1996', '1997_2001', '2002_2006'
 const genres = {
     "all": "All",
     "Doomsday_film_Apocalyptic_and_postapocalyptic_fiction_Dystopia_Disaster": "Doomsday film, Apocalyptic and postapocalyptic fiction, Dystopia, Disaster",
-    "Detective_Detective_fiction_Crime_Thriller_Mystery": "Detective, Detective fiction, Crime, Thriller_Mystery",
+    "Detective_Detective_fiction_Crime_Thriller_Mystery": "Detective, Detective fiction, Crime, Thriller, Mystery",
     "Grossout_film_Gross_out_Romance_Film_Comedy": "Grossout film, Gross out Romance, Film, Comedy",
     "Horror_Drama_Slasher_Psychological_thriller": "Horror, Drama, Slasher, Psychological, thriller",
     "Family_Film_ChildrensFamily_Comedy_Animation": "Family film, Childrens, Family, Comedy, Animation",
@@ -18,6 +18,34 @@ const genres = {
     "Documentary_Culture__Society_Biography_Social_issues": "Documentary, Culture, Society, Biography, Social issues",
     "Environmental_Science_Nature_Gross_out_Grossout_film": "Environmental, Science, Nature, Gross out, Grossout film",
 }
+
+
+const features_lin_reg = {
+    'cast_max' : 'Score of the most famous actor in revelation movie',
+    'cast_mean': 'Average score of the casting of the revelation movie',
+    'cast_median': 'Median score of the casting of the revelation movie',
+    'cast_nb_famous_actors': 'Number of famous actors in revelation movie',
+    'cast_prop_famous_actors': 'Ratio of famous actors in revelation movie',
+    'F_max': 'Score of the most famous female actress in revelation movie',
+    'F_mean': 'Average score of the female casting of the revelation movie',
+    'F_median': 'Median score of the female casting of the revelation movie',
+    'F_nb_famous_actors': 'Number of famous female actress in revelation movie',
+    'F_prop_famous_actors': 'Ratio of famous female actresses in revelation movie',
+    'M_max': 'Score of the most famous male actor in revelation movie',
+    'M_mean': 'Average score of the male casting of the revelation movie',
+    'M_median': 'Median score of the male casting of the revelation movie',
+    'M_nb_famous_actors': 'Number of famous male actor in revelation movie',
+    'M_prop_famous_actors': 'Ratio of famous male actors in revelation movie',
+    'previous_cast_max': 'Score of the most famous actor the actor has played with in the past three years',
+    'previous_cast_mean': 'Average score of all actors the actor has played with in the past three years',
+    'previous_cast_prop_famous_actors': 'Average ratio of famous actors among each movie of the actor has played with in the past three years',
+    'previous_cast_nb_famous_actors': 'Total number of famous actors the actor has played with in the past three years',
+    'm_release_year': 'Movie release year',
+    'actor_age': 'Actor age',
+    'actor_gender_cat': 'Female gender',
+    'nb_movies_before_this_movie': 'Number of movies the actor has already starred in'
+}
+
 
 function update_current_hist(){
 
@@ -44,9 +72,7 @@ function init_select() {
     }
 
     for(const [key, val] of Object.entries(genres)){
-        let g = key
-        let display_genre  = val
-        let elem = "<option value='"+g+"'>"+display_genre + "</option>"
+        let elem = "<option value='"+key+"'>"+ val + "</option>"
         document.getElementById("s_genre").insertAdjacentHTML("beforeend", elem)
     }
 }
@@ -58,6 +84,33 @@ function UrlExists(url) {
     return http.status!==404;
 }
 
+function create_pers_selector(){
+    for(const [key, val] of Object.entries(features_lin_reg)){
+        let label = `<label for="${key}">${val}</label>`
+        let sel = `<select id="${key}"></select>`
+        document.getElementById("personal_selector").insertAdjacentHTML("beforeend", label)
+        document.getElementById("personal_selector").insertAdjacentHTML("beforeend", sel)
+        document.getElementById("personal_selector").insertAdjacentHTML("beforeend", "<br/>")
+    }
+}
+
+
+function create_pers_selector_options(){
+    for(const [key, val] of Object.entries(features_lin_reg)){
+        for(let i=0; i<periods.length; i++){
+            let opt = `<option value="${periods[i]}">${periods[i]}</option>`
+            document.getElementById(key).insertAdjacentHTML("beforeend", opt)
+        }
+    }
+}
+
+
+function predict_score(){
+    let rnd = Math.round(Math.random()*100)
+    document.getElementById("predicted_chances").textContent = `Your predicted chances of becoming famous are ${rnd}%`
+}
 
 init_select()
 update_current_hist()
+create_pers_selector()
+create_pers_selector_options()

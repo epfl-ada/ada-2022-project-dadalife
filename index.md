@@ -37,6 +37,8 @@ As a reminder, our metric assigned a score to actors who appeared in a film that
 After some analysis, this score is missing something, it’s missing the history of the actor·ress. To take into account the entire career of an actor·ress his·her score has been adjusted with the length of his·her career and the number of movie he·she starred in, with a decay over time.
 This new way to find the score has been compared to the Google trends tool. The results seen in the figures below show the resemblance between our score functions curves and google trends curves for a few different actors.
 
+<img src="assets/images/img/trends.svg" alt="comparaison with google trends"/>
+<img src="assets/images/img/score.svg" alt="comparaison with google trends"/>
 //TODO: HERE IS A GRAPH THAT SHOWS OUR SCORE COMPARED TO GOOGLE TRENDS, SO IT'S KINDA OF A GOOD SCORE.
 @James si tu as un export propre du truc c'est nice. Yep il est dans images/4_actors_...
 
@@ -91,6 +93,14 @@ An interesting thing to see is how do some attributes of your next movie change 
 
 # Now it's your turn
 Ok, now you give us your attributes and we tell you what to do, right now.
+
+<div class="mb2">
+    <div class="mb2" id="personal_selector">
+    </div>
+    <button onclick="predict_score()" class="nice_button">Go !</button><br/>
+    <p id="predicted_chances"></p>
+</div>
+
 
 # Results
 Here are the main results we were able to make in our analysis:
