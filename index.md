@@ -18,9 +18,9 @@ Hollywood’s most famous actor or actress? Then you stumbled on the right websi
 learn to organize your career, who to play with, what kind of film to star in and other tricks to boost your 
 popularity to the top!
 
-<div class="row mt2">
+<div class="row">
     <div class="column left">
-        <h2 style="text-align: left">Fame definition</h2>
+        <h1 style="text-align: left">Fame definition</h1>
         <p>When can somebody be considered a Hollywood star? The philosophical answer to this question is out of the scope 
         of this analysis. However, we decide to use a numerical value downloadable from 
         <a href="https://www.the-numbers.com/box-office-star-records/domestic/yearly-acting/">The Numbers</a>. Their ranking is based on 
