@@ -7,8 +7,9 @@ The page is publicly accessible from [here](https://epfl-ada.github.io/ada-2022-
 
 If you want to run it locally :
 ```bash
-git clone git@github...
+git clone git@github.com:epfl-ada/ada-2022-project-dadalife.git
 cd ada-2022-project-dadalife
+git checkout pages
 bundle install
 bundle exec jekyll serve
 ```
