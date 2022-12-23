@@ -18,32 +18,37 @@ Hollywood’s most famous actor or actress? Then you stumbled on the right websi
 learn to organize your career, who to play with, what kind of film to star in and other tricks to boost your 
 popularity to the top!
 
+<div></div>
 
-## Fame definition
+<div class="row mt2">
+    <div class="column left">
+        <h2 style="text-align: left">Fame definition</h2>
+        <p>When can somebody be considered a Hollywood star? The philosophical answer to this question is out of the scope 
+of this analysis. However, we decide to use a numerical value downloadable from 
+<a href="https://www.the-numbers.com/box-office-star-records/domestic/yearly-acting/">The Numbers</a>. Their ranking is based on 
+the Box-Office revenue (BOR) of the films each actor played in during the past three years.</p>
 
-When can somebody be considered a Hollywood star? The philosophical answer to this question is out of the scope 
-of this analysis. However, we decided to use a numerical value downloadable from 
-[The Numbers](https://www.the-numbers.com/box-office-star-records/domestic/yearly-acting/). Their ranking is based on 
-the Box-Office revenue (BOR) of the films each actor played in during the past three years.
+<p>This metric follows the idea that when an actor has played in a movie that generated a large BOR, the movie has a lot
+of visibility which increases the fame of the cast.</p>
 
-This metric follows the idea that when an actor has played in a movie that generated a large BOR, the movie has a lot 
-of visibility which increases the fame of the cast. 
-
-We group movies by lustrum (1 lustrum = 5 years) to ease comparisons and for better visualisation purposes. We define
-'becoming famous' as the first lustrum in which you appear in _The Numbers_, after which you are considered famous for 
+<p>We group movies by lustrum (1 lustrum = 5 years) to ease comparisons and for better visualisation purposes. We define
+'becoming famous' as the first lustrum in which you appear in <i>The Numbers</i>, after which you are considered famous for
 the rest of your life. We also added a weight decaying over time, to represent that a recent high BOR movie will have a
-greater impact on your fame than an old movie.
+greater impact on your fame than an old movie.</p>
 
-We compare our metric with Google Trends to check whether it is suitable, below is a graph comparing a few 
-actors·resses.
+    </div>
+    <div class="column right">
+        <img class="mt3" src="assets/images/score.svg" alt="comparison with google trends"/>
+        <img src="assets/images/trends.svg" alt="comparison with google trends"/>
+    </div>
+</div>
 
-<img src="assets/images/score.svg" alt="comparison with google trends"/>
-<img src="assets/images/trends.svg" alt="comparison with google trends"/>
+
 <br/>
 
 # Roadmap
 
-Now that we have a basis on the metric for fame, we will be able to give you tips and tricks to reach the top of the Hollywood
+Now that we have a basis on the metric for fame, we are able to give you tips and tricks to reach the top of the Hollywood
 food chain. But how? We will first have a look at the attributes of movies that have a revelation, as well as attributes of 
 actors·resses when they are revealed. Then we will look at which actors·resses boosted others to give you advice about 
 the cast. We will also show how important it is to stay strongly connected to other actors. Then we will give you hints on what to 
@@ -54,7 +59,7 @@ attributes, to maximise your chances to become famous.
 # What kind of films will make you famous?
 
 The first thing to say is that you should start with films that have the biggest audience. Comedy or action films are, 
-as shown on the graph below, the 2 most appropriate genres, regardless of whether you're a man or a woman.
+as shown on the graph below, the 2 most appropriate genres, regardless of whether you're male or female.
 
 <img src="assets/images/index.png" alt="Film genre revelation"/>
 
@@ -63,15 +68,21 @@ revealing actors and actresses. The graph on the left shows the paramters that h
 right we can see how these parameters evolved in the second film after an actor·ress revelation. This way you know what
 to focus on to become famous, but also what you should pay attention to when preparing your next movie.
 
-<img src="assets/images/logistic_regression_comparison.svg" alt="ladder graph revelation features"/>
-
-We can see that coacting with a cast having a high score will negatively affect your probability of 
-becoming famous. This is an interesting fact, one could think that playing with a famous cast would reveal you’re 
-actually shadowed by it !
+<img src="assets/images/regression_single.png" alt="ladder graph revelation features"/>
 
 ### Becoming famous
-We can see that ATTRIBUTE_1 has a high positive impact, meaning the more ATTRIBUTE_1 a movie has, the more likely it is to create a revelation. On the contrary, ATTRIBUTE_99 has a high negative impact, meaning you should avoid a movie that has a high ATTRIBUTE_99. ATTRIBUTE_50 however has close to no effect, no particular advice about this attribute.
-With this, we can already come up with a few tips on what to prioritize and what to avoid. Go for ATTRIBUTE_1, ATTRIBUTE_2, ATTRIBUTE_3 movies, they will maximise your chances to become famous, and avoid ATTRIBUTE_99, ATTRIBUTE_98, ATTRIBUTE_97, they will negatively impact your likelihood to become famous.
+There’s a lot to say and see on the previous graph. The second feature says a lot about our society; As there are more 
+famous male actors in the revelation movies, you have more chances to be revealed by actors than by actresses. Even
+worse, the median score of the male casting of the RM has a positive weight while the median 
+score of the female casting of the RM has a negative weight !
+
+The casting’s average score in RM has a relatively large positive weight, so you would be tempted to play with a lot of
+famous actors. But be careful, the ratio of famous actors in the RM has a negative weight so a trade-off has to be made
+regarding the number of famous actors to star with in order to be revealed. The average score of all actors that 
+played within the past three years have a strong negative weight, which strengthens the point of being careful when 
+choosing the famous actors you'd like to play with.
+
+<img src="assets/images/regression_comparaison.png" alt="ladder graph revelation features"/>
 
 ### Now that I am famous, how shall I choose my next perfomance?
 Based on the graph on the right, it is clear that the strategy to adopt is not the same. Some features remain important, some change drastically. Here are some of the main changes:
@@ -114,7 +125,7 @@ becomes orange upon becoming famous. The year after the node becomes red since h
 It is interesting to see that a lot of revelations start directly in orange meaning that they are revealed in their 
 first movie! A second observation is that the heart of the graph is very strongly connected, which emphasizes 
 the importance of networking in this industry.
-<div class="center-children">
+<div class="center-children mb2">
     <img src="assets/images/GIF_Connectivity.gif" class="mb2" alt="connectivity evolution gif"/>
 </div>
 
@@ -126,22 +137,22 @@ this tool in order for you to estimate how good a film could be for your career 
 <div class="mb2" id="personal_selector">
     <div class="row">
         <div class="column left"> <label for="age">Age: </label> </div>
-        <div class="column right"><input type="number" id="age" min="0" max="115" value="25"/> </div>
+        <div class="column right"><input type="number" onchange="update_button_availability(false)" id="age" min="0" max="115" value="25"/> </div>
     </div> 
     <div class="row">
         <div class="column left"><label for="total_actors">Casting size excluding you:</label></div>
-        <div class="column right"><input type="number" id="total_actors" min="1" max="20" value="5"/></div>
+        <div class="column right"><input type="number" onchange="update_button_availability(false)" id="total_actors" min="1" max="20" value="5"/></div>
     </div>
     <div class="row">
         <div class="column left"> Sex: </div>
         <div class="column right">         
             <div>
               <input type="radio" id="gender" name="drone" value="1" checked />
-              <label for="gender">Woman</label>
+              <label for="gender">Female</label>
             </div>
             <div>
               <input type="radio" id="is_male" name="drone" value="0" />
-              <label for="is_male">Man</label>
+              <label for="is_male">Male</label>
             </div>
         </div>
     </div>
@@ -150,7 +161,7 @@ this tool in order for you to estimate how good a film could be for your career 
             <label for="actor1">Famous actor 1</label>
         </div>
         <div class="column right"> 
-            <select id="actor1"> </select>    
+            <select id="actor1" onchange="update_button_availability(false)"> </select>    
         </div>
     </div>
     <div class="row">
@@ -158,7 +169,7 @@ this tool in order for you to estimate how good a film could be for your career 
             <label for="actor2">Famous actor 2</label>
         </div>
         <div class="column right">
-            <select id="actor2"></select>  
+            <select id="actor2" onchange="update_button_availability(false)"></select>  
         </div>
     </div>
     <div class="row">
@@ -166,7 +177,7 @@ this tool in order for you to estimate how good a film could be for your career 
             <label for="actor3">Famous actor 3</label>
         </div>
         <div class="column right">
-            <select id="actor3"></select>  
+            <select id="actor3" onchange="update_button_availability(false)"></select>  
         </div>
     </div>
     <div class="row">
@@ -174,7 +185,7 @@ this tool in order for you to estimate how good a film could be for your career 
             <label for="actor4">Famous actor 4</label>
         </div>
         <div class="column right">
-            <select id="actor4"></select>  
+            <select id="actor4" onchange="update_button_availability(false)"></select>  
         </div>
     </div>
     <div class="row">
@@ -182,7 +193,7 @@ this tool in order for you to estimate how good a film could be for your career 
             <label for="actor5">Famous actor 5</label>
         </div>
         <div class="column right">
-            <select id="actor5"></select>  
+            <select id="actor5" onchange="update_button_availability(false)"></select>  
         </div>
     </div>
     <div class="center-children">

@@ -74,7 +74,7 @@ function create_pers_selector_options(){
     for(let i=1; i<6;i++){
         let opt = `<option value="default">None</option>`
         document.getElementById(`actor${i}`).insertAdjacentHTML("beforeend", opt)
-        for (const [key, _] of Object.entries(actor_dict)){
+        for (const key in actor_dict){
             opt = `<option value="${key}">${key}</option>`
             document.getElementById(`actor${i}`).insertAdjacentHTML("beforeend", opt)
         }
@@ -88,44 +88,9 @@ function create_pers_selector_options(){
  */
 function predict_score(){
     // first validate all inputs
-    console.log("test")
-    let actors = []
-    const a1 = document.getElementById("actor1").value
-    const a2 = document.getElementById("actor2").value
-    const a3 = document.getElementById("actor3").value
-    const a4 = document.getElementById("actor4").value
-    const a5 = document.getElementById("actor5").value
-
-    if (a1!=="default"){
-        actors.push(actor_dict[a1])
-    }
-    if (a2!=="default" && a2!==a1){
-        actors.push(actor_dict[a2])
-    }
-    if (a3!=="default" && a3!==a2 && a3!==a1){
-        actors.push(actor_dict[a3])
-    }
-    if (a4!=="default" && a4!==a3 && a4!==a2 && a4!==a1){
-        actors.push(actor_dict[a4])
-    }
-    if (a5!=="default" && a5!==a5 && a5!==a3 && a5!==a2 && a5!==a1){
-        actors.push(actor_dict[a5])
-    }
-
-    // don't compute score if invalid inputs
+    let actors = update_button_availability(true)
     const total_actors = parseInt(document.getElementById("total_actors").value) + 1
     const age = parseInt(document.getElementById("age").value)
-    if (age <= 0 || age >= 115){
-        document.getElementById("predicted_chances").textContent = `Please fill in valid values.`
-        return
-    }
-    if (total_actors <= 0 || total_actors >= 22 ){
-        document.getElementById("predicted_chances").textContent = `Please fill in valid values.`
-        return
-    }
-    if (actors.length === 0){
-        return
-    }
 
     let score = compute_score(actors, total_actors, age)
     let score_ref = compute_score_alone(total_actors, age)
@@ -201,6 +166,52 @@ function compute_score_alone(total_actors, age){
     return compute_score([], total_actors, age)
 }
 
+/**
+ * Checks that all the inputs for the predictor are valid. If there are not, displays a small error msg after the button
+ * and disables the button, elses re-enables the button
+ * @param return_list whether or not to return the selected actor list
+ * @returns {*[]} the selected actor list if return_list evaluates to true
+ */
+function update_button_availability(return_list){
+    let actors = []
+    const a1 = document.getElementById("actor1").value
+    const a2 = document.getElementById("actor2").value
+    const a3 = document.getElementById("actor3").value
+    const a4 = document.getElementById("actor4").value
+    const a5 = document.getElementById("actor5").value
+
+    if (a1!=="default"){
+        actors.push(actor_dict[a1])
+    }
+    if (a2!=="default" && a2!==a1){
+        actors.push(actor_dict[a2])
+    }
+    if (a3!=="default" && a3!==a2 && a3!==a1){
+        actors.push(actor_dict[a3])
+    }
+    if (a4!=="default" && a4!==a3 && a4!==a2 && a4!==a1){
+        actors.push(actor_dict[a4])
+    }
+    if (a5!=="default" && a5!==a5 && a5!==a3 && a5!==a2 && a5!==a1){
+        actors.push(actor_dict[a5])
+    }
+
+    const total_actors = parseInt(document.getElementById("total_actors").value) + 1
+    const age = parseInt(document.getElementById("age").value)
+    if (age <= 0 || age >= 115 || total_actors <= 0 || total_actors >= 22 || actors.length === 0){
+        document.getElementById("button_predict").disabled = true;
+        document.getElementById("predicted_chances").textContent = `Please fill in valid values.`
+    }else{
+        document.getElementById("button_predict").disabled = false;
+    }
+
+
+    if (return_list){
+        return actors
+    }
+
+}
+
 
 /** computes the median of an array, taken from stackoverflow
  *
@@ -247,4 +258,4 @@ function max(numbers){
 create_pers_selector_options()
 init_select()
 update_current_hist()
-create_pers_selector_options()
+update_button_availability()

@@ -2,6 +2,14 @@
     margin-bottom: 15px;
 }
 
+.mt2{
+    margin-top: 30px;
+}
+
+.mt3{
+    margin-top: 45px;
+}
+
 /*to have the text at a better palce*/
 .page-banner .page-banner-inner {
     top: 80%;
@@ -36,6 +44,12 @@
     color: #fff;
     background-color: #0069d9;
     border-color: #0069d9;
+}
+
+.nice_button:disabled{
+    color: #fff;
+    background-color: #5f6165;
+    border-color: #5f6165;
 }
 
 select {
