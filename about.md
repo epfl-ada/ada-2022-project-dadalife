@@ -6,6 +6,9 @@ layout: about
 title: About
 ---
 
+<script src="assets/js/dlab_logo.js"></script>
+<link rel="stylesheet" href="assets/css/about.css"/>
+
 ## The team
 This project was done for the <a href="ada.epfl.ch">CS-401 Applied Data Analysis course</a>, in 2022. It's the work 
 of the _dADAlife_ team.
