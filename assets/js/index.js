@@ -1,4 +1,5 @@
 const periods = ['1982_1986', '1987_1991', '1992_1996', '1997_2001', '2002_2006', '2007_2011']
+
 const genres = {
     "all": "All",
     "Doomsday_film_Apocalyptic_and_postapocalyptic_fiction_Dystopia_Disaster": "Doomsday film, Apocalyptic and postapocalyptic fiction, Dystopia, Disaster",
@@ -18,32 +19,6 @@ const genres = {
     "Environmental_Science_Nature_Gross_out_Grossout_film": "Environmental, Science, Nature, Gross out, Grossout film",
 }
 
-
-const features_lin_reg = {
-    'cast_max' : 'Score of the most famous actor in revelation movie',
-    'cast_mean': 'Average score of the casting of the revelation movie',
-    'cast_median': 'Median score of the casting of the revelation movie',
-    'cast_nb_famous_actors': 'Number of famous actors in revelation movie',
-    'cast_prop_famous_actors': 'Ratio of famous actors in revelation movie',
-    'F_max': 'Score of the most famous female actress in revelation movie',
-    'F_mean': 'Average score of the female casting of the revelation movie',
-    'F_median': 'Median score of the female casting of the revelation movie',
-    'F_nb_famous_actors': 'Number of famous female actress in revelation movie',
-    'F_prop_famous_actors': 'Ratio of famous female actresses in revelation movie',
-    'M_max': 'Score of the most famous male actor in revelation movie',
-    'M_mean': 'Average score of the male casting of the revelation movie',
-    'M_median': 'Median score of the male casting of the revelation movie',
-    'M_nb_famous_actors': 'Number of famous male actor in revelation movie',
-    'M_prop_famous_actors': 'Ratio of famous male actors in revelation movie',
-    'previous_cast_max': 'Score of the most famous actor the actor has played with in the past three years',
-    'previous_cast_mean': 'Average score of all actors the actor has played with in the past three years',
-    'previous_cast_prop_famous_actors': 'Average ratio of famous actors among each movie of the actor has played with in the past three years',
-    'previous_cast_nb_famous_actors': 'Total number of famous actors the actor has played with in the past three years',
-    'm_release_year': 'Movie release year',
-    'actor_age': 'Actor age',
-    'actor_gender_cat': 'Female gender',
-    'nb_movies_before_this_movie': 'Number of movies the actor has already starred in'
-}
 
 function update_current_hist(){
 
@@ -87,7 +62,7 @@ function create_pers_selector_options(){
         let opt = `<option value="default">None</option>`
         document.getElementById(`actor${i}`).insertAdjacentHTML("beforeend", opt)
         for (const [key, val] of Object.entries(actor_dict)){
-            opt = `<option value="${val}">${key}</option>`
+            opt = `<option value="${key}">${key}</option>`
             document.getElementById(`actor${i}`).insertAdjacentHTML("beforeend", opt)
         }
     }
@@ -104,8 +79,8 @@ function predict_score(){
     const a4 = document.getElementById("actor4").value
     const a5 = document.getElementById("actor5").value
 
-    if (a1!=="None"){
-        actors.push(a1)
+    if (a1!=="default"){
+        actors.push(actor_dict[a1])
     }
     if (a2!=="default"){
         actors.push(actor_dict[a2])
@@ -128,18 +103,19 @@ function predict_score(){
         document.getElementById("button_predict").setAttribute("disabled", true)
         return
     }
-    if (total_actors < 0 || total_actors >= 22){
+
+    if (total_actors <= 0 || total_actors >= 22 ){
+        document.getElementById("predicted_chances").textContent = `Please fill in valid values.`
+        document.getElementById("button_predict").setAttribute("disabled", true)
         return
     }
 
-
-
-    let score = compute_score(actors)
+    let score = compute_score(actors, total_actors, age)
     document.getElementById("predicted_chances").textContent = `Your predicted chances of becoming famous are ${Math.round(score*100)}%`
 }
 
 
-function compute_score(actorList){
+function compute_score(actorList, total_actors, age){
 
     // throw warning if nothing is fulfilled
     const is_woman = document.getElementById("gender").checked
@@ -154,19 +130,19 @@ function compute_score(actorList){
 
     let score = 0
     // overall participation
-    score += weights.cast_max * Math.max(scores)
+    score += weights.cast_max * max(scores)
     score += weights.cast_mean * mean(scores)
     score += weights.cast_median * median(scores)
     score += weights.cast_nb_famous_actors * actorList.length
     score += weights.cast_prop_famous_actors * actorList.length / total_actors
     // woman
-    score += weights.F_max * Math.max(scores_f)
+    score += weights.F_max * max(scores_f)
     score += weights.F_mean * mean(scores_f)
     score += weights.F_median * median(scores_f)
     score += weights.F_nb_famous_actors * scores_f.length
     score += weights.F_prop_famous_actors * scores_f.length / total_actors
     // man
-    score += weights.M_max * Math.max(scores_m)
+    score += weights.M_max * max(scores_m)
     score += weights.M_mean * mean(scores_m)
     score += weights.M_median * median(scores_m)
     score += weights.M_nb_famous_actors * scores_m.length
@@ -201,6 +177,14 @@ function mean(numbers){
         return 0
     }
     return numbers.reduce((a, b) => a + b, 0) / numbers.length
+}
+
+function max(numbers){
+    if (numbers.length === 0){
+        return 0
+    }
+
+    return Math.max.apply(Math, numbers)
 }
 
 create_pers_selector_options()

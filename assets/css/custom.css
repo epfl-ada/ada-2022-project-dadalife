@@ -11,6 +11,33 @@
     display: none;
 }
 
+/*Colors and stuff for button taken from bootstrap*/
+.nice_button{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid transparent;
+
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.nice_button:hover{
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0069d9;
+}
+
 select {
     max-width: 100%;
     text-wrap: normal;
@@ -25,4 +52,35 @@ iframe{
     width: 100%;
     height: 500px;
     border: 0 none white;
+}
+
+p:not(.light):not(.dark){
+    font-size: 14pt;
+
+}
+
+.center-children{
+    text-align: center;
+}
+
+.column {
+    width: 49%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    margin-bottom: 7px;
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.left{
+    float: left;
+    text-align: right;
+}
+
+.right{
+    float: right;
+    text-align: left;
 }

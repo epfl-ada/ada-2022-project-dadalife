@@ -28,11 +28,11 @@ function extract_scores_list(actor_list){
 
     for(let i=0; i<actor_list.length;i++){
 
-        const a=actor_list[i]
+        let a = actor_list[i]
 
         scores.push(a['score'])
 
-        if (a['gender']){
+        if (a['gender_cat']){
             scores_f.push(a['score'])
         }else {
             scores_m.push(a['score'])

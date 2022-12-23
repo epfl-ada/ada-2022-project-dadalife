@@ -9,8 +9,6 @@ subheading: ""
 banner: "/assets/images/banners/hwbanner.jpg"
 ---
 
-# DISCLAIMER: SITE UNDER CONSTRUCTION, DON'T TAKE IT TOO SERIOUSLY :)
-
 # New in the Hollywood industry? Here's how to make it to the top!
 
 You just got your first background character role, and you’re wondering how you should play your move to become 
@@ -90,47 +88,73 @@ An interesting thing to see is how do some attributes of your next movie change 
 //TODO: Pas full sûr de cette section, on peut la tej en vrai
 
 # Now it's your turn
-Ok, now you give us your attributes, and we tell you what to do, right now.
+Ok, now tell us who you are, and we tell you how likely you would have been famous shooting with some people in 2013.
 
-<div class="mb2">
-    <div class="mb2" id="personal_selector">
-        <label for="age">Age: </label>
-        <input type="number" id="age" min="0" default="0"/>    
-        <br/>
-        <label for="total_actors">Casting size excluding you:</label>
-        <input type="number" id="total_actors" min="1" default="0"/>
-        <legend>Gender:</legend>
-        <div>
-          <input type="radio" id="gender" name="drone" value="1"
-                 checked>
-          <label for="huey">Woman</label>
-        </div>
-        <div>
-          <input type="radio" id="is_male" name="drone" value="0">
-          <label for="dewey">Man</label>
-        </div>
-        <br/>
-        <label for="actor1">Actor 1</label>
-        <select id="actor1">
-        </select>    
-        <br/>
-        <label for="actor2">Actor 2</label>
-        <select id="actor2">
-        </select>    
-        <br/>
-        <label for="actor3">Actor 3</label>
-        <select id="actor3">
-        </select>    
-        <br/>
-        <label for="actor4">Actor 4</label>
-        <select id="actor4">
-        </select>    
-        <br/>
-        <label for="actor5">Actor 5</label>
-        <select id="actor5">
-        </select>
+<div class="mb2" id="personal_selector">
+    <div class="row">
+        <div class="column left"> <label for="age">Age: </label> </div>
+        <div class="column right"><input type="number" id="age" min="0" value="25"/> </div>
+    </div> 
+    <div class="row">
+        <div class="column left"><label for="total_actors">Casting size excluding you:</label></div>
+        <div class="column right"><input type="number" id="total_actors" min="1" value="5"/></div>
     </div>
-    <button onclick="predict_score()" class="nice_button">Go !</button><br/>
+    <div class="row">
+        <div class="column left"> Sex: </div>
+        <div class="column right">         
+            <div>
+              <input type="radio" id="gender" name="drone" value="1" checked />
+              <label for="gender">Woman</label>
+            </div>
+            <div>
+              <input type="radio" id="is_male" name="drone" value="0" />
+              <label for="is_male">Man</label>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column left">
+            <label for="actor1">Famous actor 1</label>
+        </div>
+        <div class="column right"> 
+            <select id="actor1"> </select>    
+        </div>
+    </div>
+    <div class="row">
+        <div class="column left">
+            <label for="actor2">Famous actor 2</label>
+        </div>
+        <div class="column right">
+            <select id="actor2"></select>  
+        </div>
+    </div>
+    <div class="row">
+        <div class="column left">
+            <label for="actor3">Famous actor 3</label>
+        </div>
+        <div class="column right">
+            <select id="actor3"></select>  
+        </div>
+    </div>
+    <div class="row">
+        <div class="column left">
+            <label for="actor4">Famous actor 4</label>
+        </div>
+        <div class="column right">
+            <select id="actor4"></select>  
+        </div>
+    </div>
+    <div class="row">
+        <div class="column left">
+            <label for="actor5">Famous actor 5</label>
+        </div>
+        <div class="column right">
+            <select id="actor5"></select>  
+        </div>
+    </div>
+    <div class="center-children">
+        <button id="button_predict" onclick="predict_score()" class="nice_button">Make me famous !</button><br/>
+    </div>
     <p id="predicted_chances"></p>
 </div>
 
