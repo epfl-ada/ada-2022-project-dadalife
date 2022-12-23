@@ -17,14 +17,15 @@ show you how to organize your career, who to play with, what kind of film to sta
 popularity to the top!
 
 
-# Definitions
-
 ## Fame definition
 
-Throughout these tips supported by analysis, we had to make some choices, one of them (and not the least) being the definition of fame. This will be the main metric throughout this analysis. When can we say that you are a Hollywood star? While the philosophical answer to this question is out of the scope of this analysis, we find a numerical way to describe it. The website [The Numbers](https://www.the-numbers.com/box-office-star-records/domestic/yearly-acting/) provides a yearly ranking of a few hundred actors and actresses. In “The Numbers”, the movies are ranked following the US Box Office and actors starring in the highest BO movies get a higher score.
+When can we say that you are a Hollywood star? The philosophical answer to this question is out of the scope 
+of this analysis. However, we decided to use a numerical value downloadable from 
+[The Numbers](https://www.the-numbers.com/box-office-star-records/domestic/yearly-acting/). Their ranking is based on 
+the Box-Office revenue (BOR) of the films each actor played in during the past three years.
 
-This metric follows the idea that when an actor has played in a movie that generated a large BO, the movie has a lot of visibility therefore the fame of the cast is increased. 
-
+This metric follows the idea that when an actor has played in a movie that generated a large BOR, the movie has a lot 
+of visibility which increases the fame of the cast. 
 
 We group movies by lustrum (1 lustrum = 5 years) to ease comparisons and for better visualisation purposes. We define
 'becoming famous' as the first lustrum in which you appear in _The Numbers_, after which you are considered famous for 
@@ -99,11 +100,11 @@ Ok, now tell us who you are, and we tell you how likely you would have been famo
 <div class="mb2" id="personal_selector">
     <div class="row">
         <div class="column left"> <label for="age">Age: </label> </div>
-        <div class="column right"><input type="number" id="age" min="0" value="25"/> </div>
+        <div class="column right"><input type="number" id="age" min="0" max="115" value="25"/> </div>
     </div> 
     <div class="row">
         <div class="column left"><label for="total_actors">Casting size excluding you:</label></div>
-        <div class="column right"><input type="number" id="total_actors" min="1" value="5"/></div>
+        <div class="column right"><input type="number" id="total_actors" min="1" max="20" value="5"/></div>
     </div>
     <div class="row">
         <div class="column left"> Sex: </div>

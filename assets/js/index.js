@@ -61,7 +61,7 @@ function create_pers_selector_options(){
     for(let i=1; i<6;i++){
         let opt = `<option value="default">None</option>`
         document.getElementById(`actor${i}`).insertAdjacentHTML("beforeend", opt)
-        for (const [key, val] of Object.entries(actor_dict)){
+        for (const [key, _] of Object.entries(actor_dict)){
             opt = `<option value="${key}">${key}</option>`
             document.getElementById(`actor${i}`).insertAdjacentHTML("beforeend", opt)
         }
@@ -82,13 +82,13 @@ function predict_score(){
     if (a1!=="default"){
         actors.push(actor_dict[a1])
     }
-    if (a2!=="default"){
+    if (a2!=="default" && a2!==a1){
         actors.push(actor_dict[a2])
     }
     if (a3!=="default" && a3!==a2 && a3!==a1){
         actors.push(actor_dict[a3])
     }
-    if (a4!=="default"){
+    if (a4!=="default" && a4!==a3 && a4!==a2 && a4!==a1){
         actors.push(actor_dict[a4])
     }
     if (a5!=="default" && a5!==a5 && a5!==a3 && a5!==a2 && a5!==a1){
@@ -130,29 +130,29 @@ function compute_score(actorList, total_actors, age){
 
     let score = 0
     // overall participation
-    score += weights.cast_max * max(scores)
-    score += weights.cast_mean * mean(scores)
-    score += weights.cast_median * median(scores)
-    score += weights.cast_nb_famous_actors * actorList.length
-    score += weights.cast_prop_famous_actors * actorList.length / total_actors
+    score += weights.cast_max * (max(scores) - param_avg.cast_max)
+    score += weights.cast_mean * (mean(scores) - param_avg.cast_mean)
+    score += weights.cast_median *( median(scores) - param_avg.cast_median)
+    score += weights.cast_nb_famous_actors * (actorList.length - param_avg.cast_nb_famous_actors)
+    score += weights.cast_prop_famous_actors * (actorList.length / total_actors - param_avg.cast_prop_famous_actors)
     // woman
-    score += weights.F_max * max(scores_f)
-    score += weights.F_mean * mean(scores_f)
-    score += weights.F_median * median(scores_f)
-    score += weights.F_nb_famous_actors * scores_f.length
-    score += weights.F_prop_famous_actors * scores_f.length / total_actors
+    score += weights.F_max * (max(scores_f) - param_avg.F_max)
+    score += weights.F_mean * (mean(scores_f) - param_avg.F_mean)
+    score += weights.F_median * (median(scores_f) - param_avg.F_median)
+    score += weights.F_nb_famous_actors * (scores_f.length - param_avg.F_nb_famous_actors)
+    score += weights.F_prop_famous_actors * (scores_f.length / total_actors - param_avg.F_prop_famous_actors)
     // man
-    score += weights.M_max * max(scores_m)
-    score += weights.M_mean * mean(scores_m)
-    score += weights.M_median * median(scores_m)
-    score += weights.M_nb_famous_actors * scores_m.length
-    score += weights.M_prop_famous_actors * scores_m.length / total_actors
+    score += weights.M_max * (max(scores_m) - param_avg.M_max)
+    score += weights.M_mean * (mean(scores_m) - param_avg.M_mean)
+    score += weights.M_median * (median(scores_m) - param_avg.M_median)
+    score += weights.M_nb_famous_actors * (scores_m.length - param_avg.M_nb_famous_actors)
+    score += weights.M_prop_famous_actors * (scores_m.length / total_actors - param_avg.M_prop_famous_actors)
 
-    score += weights.m_release_year * 2013
-    score += weights.actor_age * age
-    score += is_woman ? weights.actor_gender_cat : 0
+    //score += weights.m_release_year * (2013 - param_avg.m_release_year)
+    score += weights.actor_age * (age - param_avg.actor_age)
+    score += is_woman ? weights.actor_gender_cat - param_avg.actor_gender_cat : 0
 
-    return score
+    return Math.exp(score)/(1+Math.exp(score))
 }
 
 

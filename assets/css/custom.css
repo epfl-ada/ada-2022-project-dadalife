@@ -11,7 +11,7 @@
     display: none;
 }
 
-/*Colors and stuff for button taken from bootstrap*/
+/*Colors and stuff for heavily inspired from bootstrap*/
 .nice_button{
     color: #fff;
     background-color: #007bff;
@@ -55,8 +55,8 @@ iframe{
 }
 
 p:not(.light):not(.dark){
-    font-size: 14pt;
-
+    font-size: 11pt;
+    text-align: justify;
 }
 
 .center-children{
