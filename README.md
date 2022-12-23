@@ -23,17 +23,20 @@ What impacts the career of an actor or actress? When one must make decisions abo
 This project shall answer the preceding questions in a visual manner, making it both easy and satisfying to read the results.
 ```
 .
+├── career_boosters                   # Pickles of career boosters used in the data story
 ├── images                            # Output images after our analysis, some used in our datastory
 ├── preprocessed_data                 # Data after being preprocessed
 ├── raw_data                          # Data initially imported
-├── src                               # Notebooks
-│   ├── preprocessing.ipynb           # Cleaning and filtering raw_data to output preprocessed_data
-│   ├── coacting_impact.ipynb         # Analysis on the impact of coacting to become famous
-│   ├── fame_coacting_features.ipynb  # Logistic regression to find importance of features
-│   ├── graph_career_booster.ipynb    # Analysis of revelating movies, and career boosters
-│   └── preprocessing.ipynb           # Cleaning and filtering raw_data to output preprocessed_data
+│
 ├── .gitignore                        # Files to be ignored when pushing from local to remote
-└── README.md
+├── README.md
+├── career_booster.ipynb              # Analysis of revelating movies, and career boosters
+├── coacting_features.ipynb           # Logistic regression to find importance of features
+├── generate_hists.ipynb              # Used for the data story
+├── insight_coacting_impact.ipynb     # Analysis on the impact of coacting to become famous
+├── milestone_2.ipynb                 # Milestone 2 analysis
+└── preprocessing.ipynb               # Cleaning and filtering raw_data to output preprocessed_data
+ 
 ```
 
 - ```raw_data``` is composed from the imported datasets described below, CMU Movie Summary Corpus and The Numbers. 
