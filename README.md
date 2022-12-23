@@ -22,6 +22,8 @@ What impacts the career of an actor or actress? When one must make decisions abo
 
 This project shall answer the preceding questions in a visual manner, making it both easy and satisfying to read the results.
 ```
+
+## Repository structure
 .
 ├── career_boosters                   # Pickles of career boosters used in the data story
 ├── images                            # Output images after our analysis, some used in our datastory
@@ -43,7 +45,7 @@ This project shall answer the preceding questions in a visual manner, making it 
 - ```preprocessed_data``` is composed of data after being handled by ```preprocessing.ipynb```, e.g. cleaning the data, filtering and thoughtfully dropping some entries.
 - ```preprocessing.ipynb``` takes raw data as input and outputs preprocessed data, suitable for analysis.
 - ```career_booster.ipynb``` looks closely at actors called career boosters, aka actors that starred in many movie that revelated other actors.
-- ```coacting_features.ipynb``` computes a logistic regression over movies that revelated some actors to output weights on which features are important
+- ```coacting_features.ipynb``` computes a logistic regression over movies that revelated some actors to output weights on which features are important.
 - ```insight_coacting_impact.ipynb``` generates graphs to give insights on the impact of coacting.
 
 
