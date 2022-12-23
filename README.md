@@ -1,7 +1,7 @@
 # Road to being a Hollywood star!
 
-This repo contains the CS-401's project of the dADAlife group. The project aims to closely look at actor's carreers, and find out success factors and roles. The data story linked to this project can be accessed [here](https://epfl-ada.github.io/ada-2022-project-dadalife/).
-This project is supervised by Lars Klein.
+This repo contains the CS-401's project of the dADAlife group. The project aims to closely look at actor's carreers, and find out success factors and roles. The data story linked to this project can be accessed [here](https://epfl-ada.github.io/ada-2022-project-dadalife/). 
+This project is supervised by Lars Klein. 
 
 ## Team Members
 * Manon Boissat   272022
@@ -48,6 +48,7 @@ This project shall answer the preceding questions in a visual manner, making it 
 - ```coacting_features.ipynb``` computes a logistic regression over movies that revelated some actors to output weights on which features are important.
 - ```insight_coacting_impact.ipynb``` generates graphs to give insights on the impact of coacting.
 
+To see the code and information about our data story, you will find everything you need to know in the branch ```pages```.
 
 ## Datasets
 ### CMU Movie Summary Corpus
