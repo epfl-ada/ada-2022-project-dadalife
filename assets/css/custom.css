@@ -7,6 +7,7 @@
     top: 80%;
 }
 
+/*to hide the sidebar*/
 .sidebar {
     display: none;
 }
@@ -15,7 +16,6 @@
 .nice_button{
     color: #fff;
     background-color: #007bff;
-    border-color: #007bff;
 
     display: inline-block;
     font-weight: 400;
@@ -43,17 +43,18 @@ select {
     text-wrap: normal;
 }
 
+/*iframe are used for the histograms plots*/
 .img-container {
     text-align: center;
     margin-bottom: 15px;
 }
-
 iframe{
     width: 100%;
     height: 500px;
     border: 0 none white;
 }
 
+/*change paragraph style, but leave the theme button unchanged*/
 p:not(.light):not(.dark){
     font-size: 11pt;
     text-align: justify;
@@ -61,10 +62,6 @@ p:not(.light):not(.dark){
 
 .center-children{
     text-align: center;
-}
-
-.column {
-    width: 49%;
 }
 
 /* Clear floats after the columns */
@@ -75,11 +72,14 @@ p:not(.light):not(.dark){
     clear: both;
 }
 
+/*columns style*/
+.column {
+    width: 49%;
+}
 .left{
     float: left;
     text-align: right;
 }
-
 .right{
     float: right;
     text-align: left;

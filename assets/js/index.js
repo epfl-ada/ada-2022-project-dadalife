@@ -71,10 +71,13 @@ function create_pers_selector_options(){
     }
 }
 
-
+/** Gets user input, sanitises it and calls compute_score to predict the chances to become famous given user input.
+ *
+ * @returns percentage of chances to become famous given user input.
+ */
 function predict_score(){
     // first validate all inputs
-
+    console.log("test")
     let actors = []
     const a1 = document.getElementById("actor1").value
     const a2 = document.getElementById("actor2").value
@@ -98,18 +101,16 @@ function predict_score(){
         actors.push(actor_dict[a5])
     }
 
-    // throw warning if nothing is fulfilled
+    // don't compute score if invalid inputs
     const total_actors = parseInt(document.getElementById("total_actors").value) + 1
     const age = parseInt(document.getElementById("age").value)
     if (age <= 0 || age >= 115){
         document.getElementById("predicted_chances").textContent = `Please fill in valid values.`
-        document.getElementById("button_predict").setAttribute("disabled", true)
         return
     }
 
     if (total_actors <= 0 || total_actors >= 22 ){
         document.getElementById("predicted_chances").textContent = `Please fill in valid values.`
-        document.getElementById("button_predict").setAttribute("disabled", true)
         return
     }
 
@@ -118,11 +119,15 @@ function predict_score(){
 }
 
 
+/** computes the predicted score for a starting actor to be famous given a certain cast.
+ *
+ * @param actorList the list of famous actors in the cast
+ * @param total_actors the total numbers of actors in the cast
+ * @param age the age of the "newcomer"
+ * @returns {number} the chance of being famous, in %
+ */
 function compute_score(actorList, total_actors, age){
-
-    // throw warning if nothing is fulfilled
     const is_woman = document.getElementById("gender").checked
-
     const [scores, scores_f, scores_m] = extract_scores_list(actorList)
 
     if (is_woman){
@@ -135,23 +140,23 @@ function compute_score(actorList, total_actors, age){
     // overall participation
     score += weights.cast_max * (max(scores) - param_avg.cast_max)
     score += weights.cast_mean * (mean(scores) - param_avg.cast_mean)
-    score += weights.cast_median *( median(scores) - param_avg.cast_median)
+    score += weights.cast_median *(median(scores) - param_avg.cast_median)
     score += weights.cast_nb_famous_actors * (actorList.length - param_avg.cast_nb_famous_actors)
-    score += weights.cast_prop_famous_actors * (actorList.length / total_actors - param_avg.cast_prop_famous_actors)
-    // woman
+    score += weights.cast_prop_famous_actors * (actorList.length/total_actors - param_avg.cast_prop_famous_actors)
+    // woman participation
     score += weights.F_max * (max(scores_f) - param_avg.F_max)
     score += weights.F_mean * (mean(scores_f) - param_avg.F_mean)
     score += weights.F_median * (median(scores_f) - param_avg.F_median)
     score += weights.F_nb_famous_actors * (scores_f.length - param_avg.F_nb_famous_actors)
-    score += weights.F_prop_famous_actors * (scores_f.length / total_actors - param_avg.F_prop_famous_actors)
-    // man
+    score += weights.F_prop_famous_actors * (scores_f.length/total_actors - param_avg.F_prop_famous_actors)
+    // man participation
     score += weights.M_max * (max(scores_m) - param_avg.M_max)
     score += weights.M_mean * (mean(scores_m) - param_avg.M_mean)
     score += weights.M_median * (median(scores_m) - param_avg.M_median)
     score += weights.M_nb_famous_actors * (scores_m.length - param_avg.M_nb_famous_actors)
-    score += weights.M_prop_famous_actors * (scores_m.length / total_actors - param_avg.M_prop_famous_actors)
-
-    //score += weights.m_release_year * (2013 - param_avg.m_release_year)
+    score += weights.M_prop_famous_actors * (scores_m.length/total_actors - param_avg.M_prop_famous_actors)
+    // global parameters
+    score += weights.m_release_year * (2013 - param_avg.m_release_year)
     score += weights.actor_age * (age - param_avg.actor_age)
     score += is_woman ? weights.actor_gender_cat - param_avg.actor_gender_cat : 0
 
@@ -159,7 +164,11 @@ function compute_score(actorList, total_actors, age){
 }
 
 
-// taken from stack-overflow, used to compute medians
+/** computes the median of an array, taken from stackoverflow
+ *
+ * @param numbers the array to return the median of
+ * @returns {unknown|number} the median of the array
+ */
 function median(numbers) {
     if (numbers.length === 0){
         return 0
