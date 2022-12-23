@@ -50,15 +50,20 @@ attributes, to maximise your chances to become famous right now.
 
 # What kind of films will make you famous?
 
-Doing a logistic regression on all movies, here are the attributes that contributed the most (and the least) towards 
-revealing at least an actor·ress. We can see that ATTRIBUTE_1 has a high positive impact, meaning the more ATTRIBUTE_1 a movie has, the more likely it is to create a revelation. On the contrary, ATTRIBUTE_99 has a high negative impact, meaning you should avoid a movie that has a high ATTRIBUTE_99. ATTRIBUTE_50 however has close to no effect, no particular advice about this attribute.
-With this, we can already come up with a few tips on what to prioritize and what to avoid. Go for ATTRIBUTE_1, ATTRIBUTE_2, ATTRIBUTE_3 movies, they will maximise your chances to become famous, and avoid ATTRIBUTE_99, ATTRIBUTE_98, ATTRIBUTE_97, they will negatively impact your likelihood to become famous.
+We perform a logistic regression on all movies, and here are the attributes that contributed the most (and the least) towards 
+revealing at least an actor·ress. On the right is another regression, but based on the second movie that actors·resses
+did after being revealed. This way we can first analyse what to prioritise to become famous, and give tips on how to
+approach the next movie.
 
 <img src="assets/images/logistic_regression_comparison.svg" alt="ladder graph revelation features"/>
 
-super graph-escalier qui arrive :)) Avec une petite analyse rapide de l'histoire hein :))
-On parle aussi ici du fait qu'il faut jouer dans des films de comédie non ?
+Revelation movie \
+We can see that ATTRIBUTE_1 has a high positive impact, meaning the more ATTRIBUTE_1 a movie has, the more likely it is to create a revelation. On the contrary, ATTRIBUTE_99 has a high negative impact, meaning you should avoid a movie that has a high ATTRIBUTE_99. ATTRIBUTE_50 however has close to no effect, no particular advice about this attribute.
+With this, we can already come up with a few tips on what to prioritize and what to avoid. Go for ATTRIBUTE_1, ATTRIBUTE_2, ATTRIBUTE_3 movies, they will maximise your chances to become famous, and avoid ATTRIBUTE_99, ATTRIBUTE_98, ATTRIBUTE_97, they will negatively impact your likelihood to become famous.
 
+Now famous, which film should I go for?\
+Based on the graph on the right, it is clear that the strategy to adopt is not the same. Some features remain important,
+some change drastically. We can note ATTRIBUTE_QUI_DEVIENT_TREEES_NEGATIF to really avoid now that you're famous.
 
 # Who are the career boosters?
 
