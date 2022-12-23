@@ -123,7 +123,7 @@ function predict_score(){
         document.getElementById("predicted_chances").textContent = `Please fill in valid values.`
         return
     }
-    if (actors.length == 0){
+    if (actors.length === 0){
         return
     }
 

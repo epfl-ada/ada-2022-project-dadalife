@@ -92,8 +92,8 @@ are displayed.
 
 <div id="img-container" class="img-container">
     <div class="mb2">
-        <select id="s_year" onchange="update_current_hist()"></select>
-        <select id="s_genre" onchange="update_current_hist()"></select>
+        <label for="s_year"></label><select id="s_year" onchange="update_current_hist()"></select>
+        <label for="s_genre"></label><select id="s_genre" onchange="update_current_hist()"></select>
     </div>
     <iframe id="hist_booster">No available data</iframe>
     <p id="hist_error">No data for given selection</p>
