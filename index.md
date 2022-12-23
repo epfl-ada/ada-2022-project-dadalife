@@ -28,7 +28,7 @@ Throughout these tips supported by analysis, we had to make some choices, one of
 This metric follows the idea that when an actor has played in a movie that generated a large BO, the movie has a lot of visibility therefore the fame of the cast is increased. 
 
 
-## Direction taken "technical stuff"
+## Direction taken, technical details
 
 In this section, we will explain the different "strategic" choices we have made both on the dataset and on the way our metric is used.
 The first choice is to take only films from the US because they represent a little more than 40% of the movies in the database which is substantial, and also our metric is based on the US box office. A second choice was to group movies by lustrums (1 lustrum = 5 years). This choice will make sense with the following explanation.
@@ -37,10 +37,8 @@ As a reminder, our metric assigned a score to actors who appeared in a film that
 After some analysis, this score is missing something, it’s missing the history of the actor·ress. To take into account the entire career of an actor·ress his·her score has been adjusted with the length of his·her career and the number of movie he·she starred in, with a decay over time.
 This new way to find the score has been compared to the Google trends tool. The results seen in the figures below show the resemblance between our score functions curves and google trends curves for a few different actors.
 
-<img src="assets/images/img/trends.svg" alt="comparaison with google trends"/>
-<img src="assets/images/img/score.svg" alt="comparaison with google trends"/>
-//TODO: HERE IS A GRAPH THAT SHOWS OUR SCORE COMPARED TO GOOGLE TRENDS, SO IT'S KINDA OF A GOOD SCORE.
-@James si tu as un export propre du truc c'est nice. Yep il est dans images/4_actors_...
+<img src="assets/images/img/score.svg" alt="comparison with google trends"/>
+<img src="assets/images/img/trends.svg" alt="comparison with google trends"/>
 
 We also used a PCA to decrease the number of genres by 95%, for the analysis to be more convenient. 
 

@@ -107,23 +107,25 @@ function predict_score(){
     if (a1!=="None"){
         actors.push(a1)
     }
-    if (a1!=="None"){
-        actors.push(a2)
+    if (a2!=="default"){
+        actors.push(actor_dict[a2])
     }
-    if (a1!=="None"){
-        actors.push(a3)
+    if (a3!=="default"){
+        actors.push(actor_dict[a3])
     }
-    if (a1!=="None"){
-        actors.push(a4)
+    if (a4!=="default"){
+        actors.push(actor_dict[a4])
     }
-    if (a1!=="None"){
-        actors.push(a5)
+    if (a5!=="default"){
+        actors.push(actor_dict[a5])
     }
 
-    // throw warning if nothing is fullfilled
-    const total_actors = document.getElementById("total_actors").value + 1
-    const age = document.getElementById("age").value + 1
-    if (age < 0 || age >= 115){
+    // throw warning if nothing is fulfilled
+    const total_actors = parseInt(document.getElementById("total_actors").value) + 1
+    const age = parseInt(document.getElementById("age").value)
+    if (age <= 0 || age >= 115){
+        document.getElementById("predicted_chances").textContent = `Please fill in valid values.`
+        document.getElementById("button_predict").setAttribute("disabled", true)
         return
     }
     if (total_actors < 0 || total_actors >= 22){
@@ -139,9 +141,7 @@ function predict_score(){
 
 function compute_score(actorList){
 
-    // throw warning if nothing is fullfilled
-    const total_actors = document.getElementById("total_actors").value + 1
-    const age = document.getElementById("age").value + 1
+    // throw warning if nothing is fulfilled
     const is_woman = document.getElementById("gender").checked
 
     const [scores, scores_f, scores_m] = extract_scores_list(actorList)
@@ -149,7 +149,7 @@ function compute_score(actorList){
     if (is_woman){
         scores_f.push(0)
     }else{
-        scores_f.push(0)
+        scores_m.push(0)
     }
 
     let score = 0
@@ -195,7 +195,7 @@ function median(numbers) {
     return sorted[middle];
 }
 
-// taken from stackoverflow. Comuptes mean of an array
+// taken from stackoverflow. Computes mean of an array
 function mean(numbers){
     if (numbers.length === 0){
         return 0
