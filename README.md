@@ -22,6 +22,8 @@ What impacts the career of an actor or actress? When one must make decisions abo
 
 This project shall answer the preceding questions in a visual manner, making it both easy and satisfying to read the results.
 ```
+
+## Repository structure
 .
 ├── career_boosters                   # Pickles of career boosters used in the data story
 ├── images                            # Output images after our analysis, some used in our datastory
