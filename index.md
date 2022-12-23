@@ -3,7 +3,7 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-title: ADA project website
+title: Homepage
 heading: Road to being a star !
 subheading: ""
 banner: "/assets/images/banners/hwbanner.jpg"
