@@ -2,21 +2,21 @@ const periods = ['1982_1986', '1987_1991', '1992_1996', '1997_2001', '2002_2006'
 
 const genres = {
     "all": "All",
-    "Doomsday_film_Apocalyptic_and_postapocalyptic_fiction_Dystopia_Disaster": "Doomsday film, Apocalyptic and postapocalyptic fiction, Dystopia, Disaster",
-    "Detective_Detective_fiction_Crime_Thriller_Mystery": "Detective, Detective fiction, Crime, Thriller, Mystery",
-    "Grossout_film_Gross_out_Romance_Film_Comedy": "Grossout film, Gross out Romance, Film, Comedy",
-    "Horror_Drama_Slasher_Psychological_thriller": "Horror, Drama, Slasher, Psychological, thriller",
-    "Family_Film_ChildrensFamily_Comedy_Animation": "Family film, Childrens, Family, Comedy, Animation",
-    "Documentary_Culture__Society_Gay_Gay_Interest": "Documentary, Culture, Society, Gay, Gay interest",
-    "Gay_Gay_Interest_Gay_Themed_LGBT": "Gay, Gay interest, Gay themed, LGBT",
-    "Antiwar_Antiwar_film_Environmental_Science_Nature": "Antiwar, Antiwar film, Environmental, Science, Nature",
-    "Environmental_Science_Nature_Sword_and_sorcery_films_Sword_and_sorcery": "Environmental, Science, Nature, Sword and sorcery films, Sword and sorcery",
-    "Business_Computers_Finance__Investing_Romance_Film": "Business, Computers, Finance/Investing, Romance film",
-    "Avantgarde_Experimental_film_Surrealism_Essay_Film": "Avantgarde, Experimental film, Surrealism, Essay film",
+    "Doomsday_film_Apocalyptic_and_postapocalyptic_fiction_Dystopia_Science_Fiction": "Doomsday film, Apocalyptic and postapocalyptic fiction, Dystopia, Science Fiction",
+    "Detective_Crime_Thriller_Detective_fiction_Mystery": "Detective, Crime, Thriller, Detective fiction, Mystery",
+    "ActionAdventure_Action_Comedy_Action_Thrillers": "ActionAdventure, Action, Comedy, Action, Thrillers",
+    "Grossout_film_Gross_out_Comedy_Romance_Film": "Grossout film, Gross out, Comedy, Romance Film",
+    "Documentary_Culture__Society_Gay_Gay_Interest": "Documentary, Culture, Society, Gay, Gay Interest",
+    "Family_Film_ChildrensFamily_Comedy_Animation": "Family, Film, ChildrensFamily, Comedy, Animation",
+    "Antiwar_film_Antiwar_Business_Computers": "Antiwar film, Antiwar, Business, Computers",
+    "Gay_Gay_Interest_Gay_Themed_LGBT": "Gay, Gay Interest, Gay Themed LGBT",
+    "Environmental_Science_Nature_Antiwar_Antiwar_film": "Environmental, Science, Nature,  Antiwar, Antiwar film",
     "Horror_Bmovie_Cult_Slasher": "Horror, Bmovie, Cult, Slasher",
-    "Business_Computers_Finance__Investing_Experimental_film" :"Business, Computers, Finance/Investing, Experimental film",
-    "Documentary_Culture__Society_Biography_Social_issues": "Documentary, Culture, Society, Biography, Social issues",
-    "Environmental_Science_Nature_Gross_out_Grossout_film": "Environmental, Science, Nature, Gross out, Grossout film",
+    "Business_Computers_Finance__Investing_Romance_Film": "Business, Computers, Finance investing, Romance_Film",
+    "Adult_Pornographic_movie_Environmental_Science_Nature": "Adult, Pornographic movie, Environmental Science, Nature",
+    "Business_Computers_Finance__Investing_Antiwar": "Business, Computers, Finance investing, Antiwar",
+    "Avantgarde_Experimental_film_Surrealism_Business": "Avantgarde, Experimental film, Surrealism, Business",
+    "Documentary_Culture__Society_Biography_Social_issues": "Documentary, Culture society, Biography, Social issues"
 }
 
 /**

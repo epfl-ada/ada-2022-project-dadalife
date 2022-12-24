@@ -63,9 +63,10 @@ revealing actors and actresses. The graph on the left shows the parameters that 
 right we can see how these parameters evolved in the second film after an actor·ress' revelation. This way you know what
 to focus on to become famous, but also what you should pay attention to when preparing your next movie.
 
+### Becoming famous
+
 <img src="assets/images/regression_single.png" alt="ladder graph revelation features"/>
 
-### Becoming famous
 There’s a lot to say and see on the previous graph. The second feature says a lot about our society; As there are more 
 famous male actors in the revelation movies, you have more chances to be revealed by actors than by actresses. Even
 worse, the median score of the male casting of the RM has a positive weight while the median 
@@ -77,9 +78,9 @@ regarding the number of famous actors to star with in order to be revealed. The 
 played within the past three years have a strong negative weight, which strengthens the point of being careful when 
 choosing the famous actors you'd like to play with.
 
-<img src="assets/images/regression_comparaison.png" alt="ladder graph revelation features"/>
-
 ### Now that I am famous, how shall I choose my next performance?
+
+<img src="assets/images/regression_comparaison.png" alt="ladder graph revelation features"/>
 
 The number of famous male actors you should play with is even more important now to stay at the top.
 
